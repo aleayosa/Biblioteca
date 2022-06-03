@@ -1,2 +1,0 @@
-C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.AssemblyReference.cache
-C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.CoreCompileInputs.cache

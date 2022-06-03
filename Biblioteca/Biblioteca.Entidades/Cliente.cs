@@ -11,8 +11,6 @@ namespace Biblioteca.Entidades
         private int _id;
         private bool _activo;
         private DateTime _fechaAlta;
-
-
         public int Id { get => _id; set => _id = value; }
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public bool Activo { get => _activo; set => _activo = value; }
@@ -24,5 +22,4 @@ namespace Biblioteca.Entidades
     //    return this.id + ") " + this.Apellido + ", " + this.Nombre;
     //}
 
-}
 }

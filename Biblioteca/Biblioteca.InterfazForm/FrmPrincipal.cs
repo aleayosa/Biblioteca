@@ -12,14 +12,13 @@ namespace Biblioteca.InterfazForm
 {
     public partial class FrmPrincipal : Form
     {
-        private BibliotecaNegocio _bibliotecaNegocio;
-        public FrmPrincipal()
-        {
-            InitializeComponent();
+        //private BibliotecaNegocio _bibliotecaNegocio;
+        //public FrmPrincipal()
+        //{
+        //    InitializeComponent();
 
-            _bibliotecaNegocio = new BibliotecaNegocio();
-        }
+        //    _bibliotecaNegocio = new BibliotecaNegocio();
+        //}
 
-        private void Alta
     }
 }

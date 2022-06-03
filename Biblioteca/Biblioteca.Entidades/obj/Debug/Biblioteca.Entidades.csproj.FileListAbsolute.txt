@@ -1,2 +1,0 @@
-C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Entidades\obj\Debug\Biblioteca.Entidades.csproj.AssemblyReference.cache
-C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Entidades\obj\Debug\Biblioteca.Entidades.csproj.CoreCompileInputs.cache
