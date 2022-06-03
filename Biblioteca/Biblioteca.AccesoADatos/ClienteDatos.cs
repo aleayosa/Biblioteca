@@ -69,15 +69,14 @@ namespace Biblioteca.AccesoADatos
         private NameValueCollection ReverseMap(Cliente cliente)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("id", cliente.id.ToString());
+            n.Add("id", cliente.Id.ToString());
             n.Add("Nombre", cliente.Nombre);
             n.Add("Apellido", cliente.Apellido);
             n.Add("Direccion", cliente.Direccion);
             n.Add("Telefono", cliente.Telefono);
             n.Add("Email", cliente.Email);
-            n.Add("DNI", cliente.DNI.ToString());
             n.Add("Activo", cliente.Activo.ToString());
-            n.Add("FechaNacimiento", cliente.FechaNacimiento.ToString("yyyy-MM-dd"));
+            n.Add("FechaAlta", cliente.FechaAlta.ToString("yyyy-MM-dd"));
             n.Add("Usuario", "880828");
             return n;
         }

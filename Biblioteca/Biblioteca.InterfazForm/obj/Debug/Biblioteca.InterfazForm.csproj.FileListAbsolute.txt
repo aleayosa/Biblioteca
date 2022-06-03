@@ -1,0 +1,5 @@
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.csproj.AssemblyReference.cache
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmPrincipal.resources
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.Properties.Resources.resources
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.csproj.GenerateResource.cache
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.csproj.CoreCompileInputs.cache

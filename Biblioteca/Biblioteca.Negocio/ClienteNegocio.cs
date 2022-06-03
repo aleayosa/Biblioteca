@@ -31,12 +31,11 @@ namespace Biblioteca.Negocio
             return cli;
         }
 
-        public void Alta(string nombre, string apellido, int dni)
+        public void Alta(string nombre, string apellido)
         {
             Cliente cliente = new Cliente();
             cliente.Nombre = nombre;
             cliente.Apellido = apellido;
-            cliente.DNI = dni;
             TransactionResult transaction = _clienteDatos.Insertar(cliente);
 
             if (!transaction.IsOk)

@@ -1,0 +1,2 @@
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.AssemblyReference.cache
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.CoreCompileInputs.cache
