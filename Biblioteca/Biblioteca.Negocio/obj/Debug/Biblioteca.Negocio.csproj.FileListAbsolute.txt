@@ -1,0 +1,13 @@
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.Negocio.dll
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.Negocio.pdb
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.AccesoADatos.dll
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.Entidades.dll
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.AccesoADatos.pdb
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.Entidades.pdb
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.CopyComplete
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.dll
+C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.pdb
