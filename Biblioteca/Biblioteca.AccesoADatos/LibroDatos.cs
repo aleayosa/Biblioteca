@@ -25,11 +25,11 @@ namespace Biblioteca.AccesoADatos
             return lst;
         }
 
-        private Libro MapObj(string json)
-        {
-            Libro lst = JsonConvert.DeserializeObject<Libro>(json); // deserializacion
-            return lst;
-        }
+        //private Libro MapObj(string json)
+        //{
+        //    Libro lst = JsonConvert.DeserializeObject<Libro>(json); // deserializacion
+        //    return lst;
+        //}
 
         public TransactionResult Insertar(Libro libros)
         {

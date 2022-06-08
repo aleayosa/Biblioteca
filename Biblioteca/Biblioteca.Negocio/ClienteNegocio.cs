@@ -19,7 +19,7 @@ namespace Biblioteca.Negocio
 
         public List<Cliente> GetLista()
         {
-            List<Cliente> list = _clienteDatos.Traer(123);
+            List<Cliente> list = _clienteDatos.Traer(880828);
 
             return list;
         }
@@ -31,11 +31,15 @@ namespace Biblioteca.Negocio
             return cli;
         }
 
-        public void Alta(string nombre, string apellido)
+        public void Alta(string nombre, string apellido, string direccion, string telefono, string email)
         {
             Cliente cliente = new Cliente();
             cliente.Nombre = nombre;
             cliente.Apellido = apellido;
+            cliente.Direccion = direccion;
+            cliente.Telefono = telefono;
+            cliente.Email = email;
+            cliente.FechaAlta = DateTime.Now.AddDays(-6000);
             TransactionResult transaction = _clienteDatos.Insertar(cliente);
 
             if (!transaction.IsOk)

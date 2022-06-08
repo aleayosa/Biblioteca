@@ -17,9 +17,6 @@ namespace Biblioteca.Entidades
     }
 
 
-    //public override string ToString()
-    //{
-    //    return this.id + ") " + this.Apellido + ", " + this.Nombre;
-    //}
+
 
 }

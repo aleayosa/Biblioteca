@@ -9,3 +9,14 @@ C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\
 C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.CopyComplete
 C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.dll
 C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.pdb
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Biblioteca.AccesoADatos.dll
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Biblioteca.AccesoADatos.pdb
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Biblioteca.Entidades.dll
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Biblioteca.Entidades.pdb
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.AssemblyReference.cache
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.CopyComplete
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.dll
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.pdb

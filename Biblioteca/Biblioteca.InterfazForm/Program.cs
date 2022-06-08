@@ -16,7 +16,10 @@ namespace Biblioteca.InterfazForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            FrmBiblioteca frm = new FrmBiblioteca();
+
+            Application.Run(frm);
         }
     }
 }

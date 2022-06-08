@@ -22,5 +22,10 @@ namespace Biblioteca.Entidades
         public string Email { get => _email; set => _email = value; }
         public string Telefono { get => _telefono; set => _telefono = value; }
 
+        public override string ToString()
+        {
+            return this.Id + ") " + this.Apellido + ", " + this.Nombre + ". Dirección: " + this.Direccion+". Teléfono: "+ this.Telefono+". Email: "+this.Email;
+        }
+
     }
 }
