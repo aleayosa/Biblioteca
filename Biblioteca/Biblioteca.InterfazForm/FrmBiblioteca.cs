@@ -34,5 +34,23 @@ namespace Biblioteca.InterfazForm
 
             frm1.Show();
         }
+
+        private void _btnPrestamos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FrmPrestamos frm2 = new FrmPrestamos();
+
+            frm2.Show();
+        }
+
+        private void _btnEjemplares_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FrmEjemplares frm3 = new FrmEjemplares();
+
+            frm3.Show();
+        }
     }
 }

@@ -88,6 +88,7 @@ namespace Biblioteca.InterfazForm
             this._btnEjemplares.TabIndex = 5;
             this._btnEjemplares.Text = "Ejemplares";
             this._btnEjemplares.UseVisualStyleBackColor = true;
+            this._btnEjemplares.Click += new System.EventHandler(this._btnEjemplares_Click);
             // 
             // _btnPrestamos
             // 
@@ -97,6 +98,7 @@ namespace Biblioteca.InterfazForm
             this._btnPrestamos.TabIndex = 6;
             this._btnPrestamos.Text = "Préstamos";
             this._btnPrestamos.UseVisualStyleBackColor = true;
+            this._btnPrestamos.Click += new System.EventHandler(this._btnPrestamos_Click);
             // 
             // _btnReportes
             // 

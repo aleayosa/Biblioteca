@@ -45,14 +45,12 @@ namespace Biblioteca.InterfazForm
                         _dataGridClientes.Rows[n].Cells[3].Value = c.Telefono;
                         _dataGridClientes.Rows[n].Cells[4].Value = c.Email;                   
                 }
-
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Error al mostrar los clientes: " + ex.Message);
             }
-
         }
 
         private void _btnAlta_Click(object sender, EventArgs e)
