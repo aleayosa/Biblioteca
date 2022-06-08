@@ -19,29 +19,9 @@ namespace Biblioteca.AccesoADatos
             return resultado;
         }
 
-        public List<Prestamo> Traer(int usuario)
-        {
-            string json2 = WebHelper.Get("biblioteca/prestamos/" + usuario.ToString()); // trae un texto en formato json de una web
-            List<Prestamo> resultado = MapList(json2);
-            return resultado;
-        }
-        public Prestamo TraerPorTelefono(string telefono)
-        {
-            string json2 = WebHelper.Get("biblioteca/prestamos/" + telefono + "/telefono"); // trae un texto en formato json de una web
-            Prestamo resultado = MapObj(json2);
-            return resultado;
-        }
-
-
         private List<Prestamo> MapList(string json)
         {
             List<Prestamo> lst = JsonConvert.DeserializeObject<List<Prestamo>>(json); // deserializacion
-            return lst;
-        }
-
-        private Prestamo MapObj(string json)
-        {
-            Prestamo lst = JsonConvert.DeserializeObject<Prestamo>(json); // deserializacion
             return lst;
         }
 
