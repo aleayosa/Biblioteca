@@ -9,7 +9,6 @@ C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\
 C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.CopyComplete
 C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.dll
 C:\Users\Usuario\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.pdb
-<<<<<<< Updated upstream
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Biblioteca.AccesoADatos.dll
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Biblioteca.AccesoADatos.pdb
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\bin\Debug\Biblioteca.Entidades.dll
@@ -21,6 +20,3 @@ C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\ob
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.CopyComplete
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.dll
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.pdb
-=======
-C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.AccesoADatos\obj\Debug\Biblioteca.AccesoADatos.csproj.CoreCompileInputs.cache
->>>>>>> Stashed changes

@@ -16,10 +16,7 @@ namespace Biblioteca.InterfazForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            FrmAltaDeCliente frm = new FrmAltaDeCliente();
-
-            Application.Run(frm);
+            Application.Run(new Form1());
         }
     }
 }
