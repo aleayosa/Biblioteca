@@ -1,4 +1,4 @@
-﻿using Biblioteca.Entidades;
+﻿
 using Biblioteca.AccesoADatos.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Specialized;
 using Newtonsoft.Json;
+using Biblioteca.Entidades;
 
 namespace Biblioteca.AccesoADatos
 {
@@ -31,38 +32,38 @@ namespace Biblioteca.AccesoADatos
             return lst;
         }
 
-        public TransactionResult Insertar(Libro libros)
-        {
-            NameValueCollection obj = ReverseMap(libros); //serializacion -> json
+        //public TransactionResult Insertar(Libro libros)
+        //{
+        //    NameValueCollection obj = ReverseMap(libros); //serializacion -> json
 
-            string json = WebHelper.Post("biblioteca/libros", obj);
+        //    string json = WebHelper.Post("biblioteca/libros", obj);
 
-            TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
+        //    TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
 
-            return lst;
-        }
+        //    return lst;
+        //}
 
-        public TransactionResult Actualizar(Libro libros)
-        {
-            NameValueCollection obj = ReverseMap(libros);
+        //public TransactionResult Actualizar(Libro libros)
+        //{
+        //    NameValueCollection obj = ReverseMap(libros);
 
-            string json = WebHelper.Put("biblioteca/libros", obj);
+        //    string json = WebHelper.Put("biblioteca/libros", obj);
 
-            TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
+        //    TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
 
-            return lst;
-        }
-        private NameValueCollection ReverseMap(Libro libros)
-        {
-            NameValueCollection n = new NameValueCollection();
-            n.Add("Edicion", libros.Edicion.ToString());
-            n.Add("Paginas", libros.Paginas.ToString());
-            n.Add("Titulo", libros.Titulo);
-            n.Add("Autor", libros.Autor);
-            n.Add("Editorial", libros.Editorial);
-            n.Add("Tema", libros.Tema);
-            n.Add("id", libros.Id.ToString());
-            return n;
-        }
+        //    return lst;
+        //}
+        //private NameValueCollection ReverseMap(Libro libro)
+        //{
+        //    NameValueCollection n = new NameValueCollection();
+        //    n.Add("Edicion", libro.Edicion.ToString());
+        //    n.Add("Paginas", libro.Paginas.ToString());
+        //    n.Add("Titulo", libro.Titulo);
+        //    n.Add("Autor", libro.Autor);
+        //    n.Add("Editorial", libro.Editorial);
+        //    n.Add("Tema", libro.Tema);
+        //    n.Add("id", libro.Id.ToString());
+        //    return n;
+        //}
     }
 }
