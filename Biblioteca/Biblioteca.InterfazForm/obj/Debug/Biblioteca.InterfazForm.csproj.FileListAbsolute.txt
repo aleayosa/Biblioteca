@@ -62,3 +62,6 @@ C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\ob
 C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.csproj.CoreCompileInputs.cache
 C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.csproj.CopyComplete
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmEjemplares.resources
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmPrestamos.resources
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmReportesEXL.resources
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmReportesPXC.resources

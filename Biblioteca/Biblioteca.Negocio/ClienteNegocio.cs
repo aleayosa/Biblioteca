@@ -39,7 +39,7 @@ namespace Biblioteca.Negocio
             cliente.Direccion = direccion;
             cliente.Telefono = telefono;
             cliente.Email = email;
-            cliente.FechaAlta = DateTime.Now.AddDays(-6000);
+            cliente.FechaAlta = DateTime.Now;
             TransactionResult transaction = _clienteDatos.Insertar(cliente);
 
             if (!transaction.IsOk)
