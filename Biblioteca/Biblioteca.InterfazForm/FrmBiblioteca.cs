@@ -52,5 +52,14 @@ namespace Biblioteca.InterfazForm
 
             frm3.Show();
         }
+
+        private void _btnReportesPrestamos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FrmReportesPXC frm4 = new FrmReportesPXC();
+
+            frm4.Show();
+        }
     }
 }

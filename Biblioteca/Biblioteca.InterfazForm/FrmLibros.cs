@@ -62,7 +62,7 @@ namespace Biblioteca.InterfazForm
             {
                 if (Validar())
                 {
-                    AltaLibro(_inputTitulo.Text, _inputAutor.Text, int.Parse(_inputEdicion.Text), _inputEditorial.Text, int.Parse(_inputPaginas.Text), _inputTemas.Text);
+                    AltaLibro(_inputTitulo1.Text, _inputAutor1.Text, int.Parse(_inputEdicion1.Text), _inputEditorial1.Text, int.Parse(_inputPaginas1.Text), _inputTemas1.Text);
                     MessageBox.Show("Se ha generado el nuevo libro");
                     Limpiar();
                     MostrarLibros();
@@ -80,17 +80,17 @@ namespace Biblioteca.InterfazForm
 
         private bool Validar()
         {
-            if (string.IsNullOrEmpty(_inputTitulo.Text))
+            if (string.IsNullOrEmpty(_inputTitulo1.Text))
                 return false;
-            if (string.IsNullOrEmpty(_inputAutor.Text))
+            if (string.IsNullOrEmpty(_inputAutor1.Text))
                 return false;
-            if (string.IsNullOrEmpty(_inputEdicion.Text))
+            if (string.IsNullOrEmpty(_inputEdicion1.Text))
                 return false;
-            if (string.IsNullOrEmpty(_inputEditorial.Text))
+            if (string.IsNullOrEmpty(_inputEditorial1.Text))
                 return false;
-            if (string.IsNullOrEmpty(_inputPaginas.Text))
+            if (string.IsNullOrEmpty(_inputPaginas1.Text))
                 return false;
-            if (string.IsNullOrEmpty(_inputTemas.Text))
+            if (string.IsNullOrEmpty(_inputTemas1.Text))
                 return false;
 
             return true;
@@ -98,12 +98,12 @@ namespace Biblioteca.InterfazForm
 
         private void Limpiar()
         {
-            _inputTitulo.Text = string.Empty;
-            _inputAutor.Text = string.Empty;
-            _inputEditorial.Text = string.Empty;
-            _inputEdicion.Text = string.Empty;
-            _inputPaginas.Text = string.Empty;
-            _inputTemas.Text = string.Empty;
+            _inputTitulo1.Text = string.Empty;
+            _inputAutor1.Text = string.Empty;
+            _inputEditorial1.Text = string.Empty;
+            _inputEdicion1.Text = string.Empty;
+            _inputPaginas1.Text = string.Empty;
+            _inputTemas1.Text = string.Empty;
         }
 
         private void FrmLibros_Load(object sender, EventArgs e)

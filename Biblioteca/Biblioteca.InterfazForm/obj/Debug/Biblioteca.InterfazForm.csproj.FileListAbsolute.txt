@@ -39,3 +39,5 @@ C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\ob
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmClientes.resources
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmLibros.resources
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmPrestamos.resources
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmReportesEXL.resources
+C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmReportesPXC.resources

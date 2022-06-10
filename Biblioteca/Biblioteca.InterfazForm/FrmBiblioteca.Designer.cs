@@ -35,8 +35,9 @@ namespace Biblioteca.InterfazForm
             this._btnLibros = new System.Windows.Forms.Button();
             this._btnEjemplares = new System.Windows.Forms.Button();
             this._btnPrestamos = new System.Windows.Forms.Button();
-            this._btnReportes = new System.Windows.Forms.Button();
+            this._btnReportesPrestamos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this._btnReporteEjemplares = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,14 +101,15 @@ namespace Biblioteca.InterfazForm
             this._btnPrestamos.UseVisualStyleBackColor = true;
             this._btnPrestamos.Click += new System.EventHandler(this._btnPrestamos_Click);
             // 
-            // _btnReportes
+            // _btnReportesPrestamos
             // 
-            this._btnReportes.Location = new System.Drawing.Point(234, 396);
-            this._btnReportes.Name = "_btnReportes";
-            this._btnReportes.Size = new System.Drawing.Size(157, 53);
-            this._btnReportes.TabIndex = 7;
-            this._btnReportes.Text = "Reportes";
-            this._btnReportes.UseVisualStyleBackColor = true;
+            this._btnReportesPrestamos.Location = new System.Drawing.Point(130, 400);
+            this._btnReportesPrestamos.Name = "_btnReportesPrestamos";
+            this._btnReportesPrestamos.Size = new System.Drawing.Size(157, 53);
+            this._btnReportesPrestamos.TabIndex = 7;
+            this._btnReportesPrestamos.Text = "Reporte de Préstamos";
+            this._btnReportesPrestamos.UseVisualStyleBackColor = true;
+            this._btnReportesPrestamos.Click += new System.EventHandler(this._btnReportesPrestamos_Click);
             // 
             // pictureBox1
             // 
@@ -119,13 +121,23 @@ namespace Biblioteca.InterfazForm
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // _btnReporteEjemplares
+            // 
+            this._btnReporteEjemplares.Location = new System.Drawing.Point(338, 400);
+            this._btnReporteEjemplares.Name = "_btnReporteEjemplares";
+            this._btnReporteEjemplares.Size = new System.Drawing.Size(157, 53);
+            this._btnReporteEjemplares.TabIndex = 8;
+            this._btnReporteEjemplares.Text = "Reporte de Ejemplares";
+            this._btnReporteEjemplares.UseVisualStyleBackColor = true;
+            // 
             // FrmBiblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1000, 830);
-            this.Controls.Add(this._btnReportes);
+            this.Controls.Add(this._btnReporteEjemplares);
+            this.Controls.Add(this._btnReportesPrestamos);
             this.Controls.Add(this._btnPrestamos);
             this.Controls.Add(this._btnEjemplares);
             this.Controls.Add(this._btnLibros);
@@ -150,7 +162,8 @@ namespace Biblioteca.InterfazForm
         private System.Windows.Forms.Button _btnLibros;
         private System.Windows.Forms.Button _btnEjemplares;
         private System.Windows.Forms.Button _btnPrestamos;
-        private System.Windows.Forms.Button _btnReportes;
+        private System.Windows.Forms.Button _btnReportesPrestamos;
+        private System.Windows.Forms.Button _btnReporteEjemplares;
     }
 }
 

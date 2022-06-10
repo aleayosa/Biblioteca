@@ -31,18 +31,17 @@ namespace Biblioteca.InterfazForm
         {
             this.label5 = new System.Windows.Forms.Label();
             this._inputPaginas = new System.Windows.Forms.Label();
-            this._inputEmail = new System.Windows.Forms.TextBox();
+            this._inputPaginas1 = new System.Windows.Forms.TextBox();
             this._inputEditorial = new System.Windows.Forms.Label();
             this._inputEdicion = new System.Windows.Forms.Label();
-            this._inputTelefono = new System.Windows.Forms.TextBox();
-            this._inputDireccion = new System.Windows.Forms.TextBox();
+            this._inputEditorial1 = new System.Windows.Forms.TextBox();
+            this._inputEdicion1 = new System.Windows.Forms.TextBox();
             this._inputAutor = new System.Windows.Forms.Label();
-            this._inputTitulo = new System.Windows.Forms.Label();
             this._btnAlta = new System.Windows.Forms.Button();
-            this._inputApellido = new System.Windows.Forms.TextBox();
-            this._inputNombre = new System.Windows.Forms.TextBox();
+            this._inputAutor1 = new System.Windows.Forms.TextBox();
+            this._inputTitulo1 = new System.Windows.Forms.TextBox();
             this._inputTemas = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this._inputTemas1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this._lblListaLibros = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,6 +53,7 @@ namespace Biblioteca.InterfazForm
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paginas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._inputTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridLibros)).BeginInit();
             this.SuspendLayout();
@@ -77,12 +77,12 @@ namespace Biblioteca.InterfazForm
             this._inputPaginas.TabIndex = 23;
             this._inputPaginas.Text = "Páginas";
             // 
-            // _inputEmail
+            // _inputPaginas1
             // 
-            this._inputEmail.Location = new System.Drawing.Point(85, 184);
-            this._inputEmail.Name = "_inputEmail";
-            this._inputEmail.Size = new System.Drawing.Size(228, 22);
-            this._inputEmail.TabIndex = 22;
+            this._inputPaginas1.Location = new System.Drawing.Point(85, 184);
+            this._inputPaginas1.Name = "_inputPaginas1";
+            this._inputPaginas1.Size = new System.Drawing.Size(228, 22);
+            this._inputPaginas1.TabIndex = 22;
             // 
             // _inputEditorial
             // 
@@ -102,19 +102,19 @@ namespace Biblioteca.InterfazForm
             this._inputEdicion.TabIndex = 20;
             this._inputEdicion.Text = "Edición";
             // 
-            // _inputTelefono
+            // _inputEditorial1
             // 
-            this._inputTelefono.Location = new System.Drawing.Point(85, 155);
-            this._inputTelefono.Name = "_inputTelefono";
-            this._inputTelefono.Size = new System.Drawing.Size(228, 22);
-            this._inputTelefono.TabIndex = 19;
+            this._inputEditorial1.Location = new System.Drawing.Point(85, 155);
+            this._inputEditorial1.Name = "_inputEditorial1";
+            this._inputEditorial1.Size = new System.Drawing.Size(228, 22);
+            this._inputEditorial1.TabIndex = 19;
             // 
-            // _inputDireccion
+            // _inputEdicion1
             // 
-            this._inputDireccion.Location = new System.Drawing.Point(85, 127);
-            this._inputDireccion.Name = "_inputDireccion";
-            this._inputDireccion.Size = new System.Drawing.Size(228, 22);
-            this._inputDireccion.TabIndex = 18;
+            this._inputEdicion1.Location = new System.Drawing.Point(85, 127);
+            this._inputEdicion1.Name = "_inputEdicion1";
+            this._inputEdicion1.Size = new System.Drawing.Size(228, 22);
+            this._inputEdicion1.TabIndex = 18;
             // 
             // _inputAutor
             // 
@@ -124,15 +124,6 @@ namespace Biblioteca.InterfazForm
             this._inputAutor.Size = new System.Drawing.Size(42, 17);
             this._inputAutor.TabIndex = 17;
             this._inputAutor.Text = "Autor";
-            // 
-            // _inputTitulo
-            // 
-            this._inputTitulo.AutoSize = true;
-            this._inputTitulo.Location = new System.Drawing.Point(13, 71);
-            this._inputTitulo.Name = "_inputTitulo";
-            this._inputTitulo.Size = new System.Drawing.Size(43, 17);
-            this._inputTitulo.TabIndex = 16;
-            this._inputTitulo.Text = "Título";
             // 
             // _btnAlta
             // 
@@ -144,19 +135,19 @@ namespace Biblioteca.InterfazForm
             this._btnAlta.UseVisualStyleBackColor = true;
             this._btnAlta.Click += new System.EventHandler(this._btnAlta_Click);
             // 
-            // _inputApellido
+            // _inputAutor1
             // 
-            this._inputApellido.Location = new System.Drawing.Point(85, 96);
-            this._inputApellido.Name = "_inputApellido";
-            this._inputApellido.Size = new System.Drawing.Size(228, 22);
-            this._inputApellido.TabIndex = 14;
+            this._inputAutor1.Location = new System.Drawing.Point(85, 96);
+            this._inputAutor1.Name = "_inputAutor1";
+            this._inputAutor1.Size = new System.Drawing.Size(228, 22);
+            this._inputAutor1.TabIndex = 14;
             // 
-            // _inputNombre
+            // _inputTitulo1
             // 
-            this._inputNombre.Location = new System.Drawing.Point(85, 68);
-            this._inputNombre.Name = "_inputNombre";
-            this._inputNombre.Size = new System.Drawing.Size(228, 22);
-            this._inputNombre.TabIndex = 13;
+            this._inputTitulo1.Location = new System.Drawing.Point(85, 68);
+            this._inputTitulo1.Name = "_inputTitulo1";
+            this._inputTitulo1.Size = new System.Drawing.Size(228, 22);
+            this._inputTitulo1.TabIndex = 13;
             // 
             // _inputTemas
             // 
@@ -167,12 +158,12 @@ namespace Biblioteca.InterfazForm
             this._inputTemas.TabIndex = 26;
             this._inputTemas.Text = "Temas";
             // 
-            // textBox1
+            // _inputTemas1
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 212);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 22);
-            this.textBox1.TabIndex = 25;
+            this._inputTemas1.Location = new System.Drawing.Point(85, 212);
+            this._inputTemas1.Name = "_inputTemas1";
+            this._inputTemas1.Size = new System.Drawing.Size(228, 22);
+            this._inputTemas1.TabIndex = 25;
             // 
             // label7
             // 
@@ -275,6 +266,15 @@ namespace Biblioteca.InterfazForm
             this.Tema.Name = "Tema";
             this.Tema.Width = 125;
             // 
+            // _inputTitulo
+            // 
+            this._inputTitulo.AutoSize = true;
+            this._inputTitulo.Location = new System.Drawing.Point(13, 71);
+            this._inputTitulo.Name = "_inputTitulo";
+            this._inputTitulo.Size = new System.Drawing.Size(43, 17);
+            this._inputTitulo.TabIndex = 16;
+            this._inputTitulo.Text = "Título";
+            // 
             // FrmLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,19 +287,19 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this.label7);
             this.Controls.Add(this._lblListaLibros);
             this.Controls.Add(this._inputTemas);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this._inputTemas1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this._inputPaginas);
-            this.Controls.Add(this._inputEmail);
+            this.Controls.Add(this._inputPaginas1);
             this.Controls.Add(this._inputEditorial);
             this.Controls.Add(this._inputEdicion);
-            this.Controls.Add(this._inputTelefono);
-            this.Controls.Add(this._inputDireccion);
+            this.Controls.Add(this._inputEditorial1);
+            this.Controls.Add(this._inputEdicion1);
             this.Controls.Add(this._inputAutor);
             this.Controls.Add(this._inputTitulo);
             this.Controls.Add(this._btnAlta);
-            this.Controls.Add(this._inputApellido);
-            this.Controls.Add(this._inputNombre);
+            this.Controls.Add(this._inputAutor1);
+            this.Controls.Add(this._inputTitulo1);
             this.Name = "FrmLibros";
             this.Text = "Libros";
             this.Load += new System.EventHandler(this.FrmLibros_Load);
@@ -314,18 +314,17 @@ namespace Biblioteca.InterfazForm
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label _inputPaginas;
-        private System.Windows.Forms.TextBox _inputEmail;
+        private System.Windows.Forms.TextBox _inputPaginas1;
         private System.Windows.Forms.Label _inputEditorial;
         private System.Windows.Forms.Label _inputEdicion;
-        private System.Windows.Forms.TextBox _inputTelefono;
-        private System.Windows.Forms.TextBox _inputDireccion;
+        private System.Windows.Forms.TextBox _inputEditorial1;
+        private System.Windows.Forms.TextBox _inputEdicion1;
         private System.Windows.Forms.Label _inputAutor;
-        private System.Windows.Forms.Label _inputTitulo;
         private System.Windows.Forms.Button _btnAlta;
-        private System.Windows.Forms.TextBox _inputApellido;
-        private System.Windows.Forms.TextBox _inputNombre;
+        private System.Windows.Forms.TextBox _inputAutor1;
+        private System.Windows.Forms.TextBox _inputTitulo1;
         private System.Windows.Forms.Label _inputTemas;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox _inputTemas1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label _lblListaLibros;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -337,5 +336,6 @@ namespace Biblioteca.InterfazForm
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paginas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
+        private System.Windows.Forms.Label _inputTitulo;
     }
 }
