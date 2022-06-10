@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Biblioteca.InterfazForm</RootNamespace>
     <AssemblyName>Biblioteca.InterfazForm</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,11 +59,23 @@
     <Compile Include="FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEjemplares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEjemplares.Designer.cs">
+      <DependentUpon>FrmEjemplares.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLibros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLibros.Designer.cs">
       <DependentUpon>FrmLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamos.Designer.cs">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEjemplares.resx">
+      <DependentUpon>FrmEjemplares.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLibros.resx">
       <DependentUpon>FrmLibros.cs</DependentUpon>

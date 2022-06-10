@@ -62,83 +62,89 @@ namespace Biblioteca.InterfazForm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 22);
+            this.label5.Location = new System.Drawing.Point(14, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(287, 24);
+            this.label5.Size = new System.Drawing.Size(330, 26);
             this.label5.TabIndex = 24;
             this.label5.Text = "Ingrese los datos del nuevo libro:";
             // 
             // _inputPaginas
             // 
             this._inputPaginas.AutoSize = true;
-            this._inputPaginas.Location = new System.Drawing.Point(13, 187);
+            this._inputPaginas.Location = new System.Drawing.Point(15, 234);
             this._inputPaginas.Name = "_inputPaginas";
-            this._inputPaginas.Size = new System.Drawing.Size(59, 17);
+            this._inputPaginas.Size = new System.Drawing.Size(66, 20);
             this._inputPaginas.TabIndex = 23;
             this._inputPaginas.Text = "Páginas";
             // 
             // _inputEmail
             // 
-            this._inputEmail.Location = new System.Drawing.Point(85, 184);
+            this._inputEmail.Location = new System.Drawing.Point(96, 230);
+            this._inputEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputEmail.Name = "_inputEmail";
-            this._inputEmail.Size = new System.Drawing.Size(228, 22);
+            this._inputEmail.Size = new System.Drawing.Size(256, 26);
             this._inputEmail.TabIndex = 22;
             // 
             // _inputEditorial
             // 
             this._inputEditorial.AutoSize = true;
-            this._inputEditorial.Location = new System.Drawing.Point(13, 159);
+            this._inputEditorial.Location = new System.Drawing.Point(15, 199);
             this._inputEditorial.Name = "_inputEditorial";
-            this._inputEditorial.Size = new System.Drawing.Size(59, 17);
+            this._inputEditorial.Size = new System.Drawing.Size(66, 20);
             this._inputEditorial.TabIndex = 21;
             this._inputEditorial.Text = "Editorial";
             // 
             // _inputEdicion
             // 
             this._inputEdicion.AutoSize = true;
-            this._inputEdicion.Location = new System.Drawing.Point(13, 130);
+            this._inputEdicion.Location = new System.Drawing.Point(15, 162);
             this._inputEdicion.Name = "_inputEdicion";
-            this._inputEdicion.Size = new System.Drawing.Size(54, 17);
+            this._inputEdicion.Size = new System.Drawing.Size(61, 20);
             this._inputEdicion.TabIndex = 20;
             this._inputEdicion.Text = "Edición";
             // 
             // _inputTelefono
             // 
-            this._inputTelefono.Location = new System.Drawing.Point(85, 155);
+            this._inputTelefono.Location = new System.Drawing.Point(96, 194);
+            this._inputTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputTelefono.Name = "_inputTelefono";
-            this._inputTelefono.Size = new System.Drawing.Size(228, 22);
+            this._inputTelefono.Size = new System.Drawing.Size(256, 26);
             this._inputTelefono.TabIndex = 19;
+            this._inputTelefono.TextChanged += new System.EventHandler(this._inputTelefono_TextChanged);
             // 
             // _inputDireccion
             // 
-            this._inputDireccion.Location = new System.Drawing.Point(85, 127);
+            this._inputDireccion.Location = new System.Drawing.Point(96, 159);
+            this._inputDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputDireccion.Name = "_inputDireccion";
-            this._inputDireccion.Size = new System.Drawing.Size(228, 22);
+            this._inputDireccion.Size = new System.Drawing.Size(256, 26);
             this._inputDireccion.TabIndex = 18;
+            this._inputDireccion.TextChanged += new System.EventHandler(this._inputDireccion_TextChanged);
             // 
             // _inputAutor
             // 
             this._inputAutor.AutoSize = true;
-            this._inputAutor.Location = new System.Drawing.Point(13, 100);
+            this._inputAutor.Location = new System.Drawing.Point(15, 125);
             this._inputAutor.Name = "_inputAutor";
-            this._inputAutor.Size = new System.Drawing.Size(42, 17);
+            this._inputAutor.Size = new System.Drawing.Size(48, 20);
             this._inputAutor.TabIndex = 17;
             this._inputAutor.Text = "Autor";
             // 
             // _inputTitulo
             // 
             this._inputTitulo.AutoSize = true;
-            this._inputTitulo.Location = new System.Drawing.Point(13, 71);
+            this._inputTitulo.Location = new System.Drawing.Point(15, 89);
             this._inputTitulo.Name = "_inputTitulo";
-            this._inputTitulo.Size = new System.Drawing.Size(43, 17);
+            this._inputTitulo.Size = new System.Drawing.Size(47, 20);
             this._inputTitulo.TabIndex = 16;
             this._inputTitulo.Text = "Título";
             // 
             // _btnAlta
             // 
-            this._btnAlta.Location = new System.Drawing.Point(201, 248);
+            this._btnAlta.Location = new System.Drawing.Point(226, 310);
+            this._btnAlta.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnAlta.Name = "_btnAlta";
-            this._btnAlta.Size = new System.Drawing.Size(112, 23);
+            this._btnAlta.Size = new System.Drawing.Size(126, 29);
             this._btnAlta.TabIndex = 15;
             this._btnAlta.Text = "Crear";
             this._btnAlta.UseVisualStyleBackColor = true;
@@ -146,41 +152,44 @@ namespace Biblioteca.InterfazForm
             // 
             // _inputApellido
             // 
-            this._inputApellido.Location = new System.Drawing.Point(85, 96);
+            this._inputApellido.Location = new System.Drawing.Point(96, 120);
+            this._inputApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputApellido.Name = "_inputApellido";
-            this._inputApellido.Size = new System.Drawing.Size(228, 22);
+            this._inputApellido.Size = new System.Drawing.Size(256, 26);
             this._inputApellido.TabIndex = 14;
             // 
             // _inputNombre
             // 
-            this._inputNombre.Location = new System.Drawing.Point(85, 68);
+            this._inputNombre.Location = new System.Drawing.Point(96, 85);
+            this._inputNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputNombre.Name = "_inputNombre";
-            this._inputNombre.Size = new System.Drawing.Size(228, 22);
+            this._inputNombre.Size = new System.Drawing.Size(256, 26);
             this._inputNombre.TabIndex = 13;
             // 
             // _inputTemas
             // 
             this._inputTemas.AutoSize = true;
-            this._inputTemas.Location = new System.Drawing.Point(13, 215);
+            this._inputTemas.Location = new System.Drawing.Point(15, 269);
             this._inputTemas.Name = "_inputTemas";
-            this._inputTemas.Size = new System.Drawing.Size(51, 17);
+            this._inputTemas.Size = new System.Drawing.Size(57, 20);
             this._inputTemas.TabIndex = 26;
             this._inputTemas.Text = "Temas";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 212);
+            this.textBox1.Location = new System.Drawing.Point(96, 265);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 22);
+            this.textBox1.Size = new System.Drawing.Size(256, 26);
             this.textBox1.TabIndex = 25;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(339, 22);
+            this.label7.Location = new System.Drawing.Point(381, 28);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 24);
+            this.label7.Size = new System.Drawing.Size(181, 29);
             this.label7.TabIndex = 28;
             this.label7.Text = "Listado de Libros";
             // 
@@ -189,18 +198,19 @@ namespace Biblioteca.InterfazForm
             this._lblListaLibros.AutoSize = true;
             this._lblListaLibros.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblListaLibros.ForeColor = System.Drawing.Color.Red;
-            this._lblListaLibros.Location = new System.Drawing.Point(339, 68);
+            this._lblListaLibros.Location = new System.Drawing.Point(381, 85);
             this._lblListaLibros.Name = "_lblListaLibros";
-            this._lblListaLibros.Size = new System.Drawing.Size(0, 23);
+            this._lblListaLibros.Size = new System.Drawing.Size(0, 27);
             this._lblListaLibros.TabIndex = 27;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Image = global::Biblioteca.InterfazForm.Properties.Resources.libros;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 291);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 364);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 355);
+            this.pictureBox1.Size = new System.Drawing.Size(334, 444);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -208,9 +218,10 @@ namespace Biblioteca.InterfazForm
             // _btnAtras
             // 
             this._btnAtras.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnAtras.Location = new System.Drawing.Point(869, 21);
+            this._btnAtras.Location = new System.Drawing.Point(978, 26);
+            this._btnAtras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnAtras.Name = "_btnAtras";
-            this._btnAtras.Size = new System.Drawing.Size(119, 29);
+            this._btnAtras.Size = new System.Drawing.Size(134, 36);
             this._btnAtras.TabIndex = 30;
             this._btnAtras.Text = "Volver";
             this._btnAtras.UseVisualStyleBackColor = false;
@@ -226,11 +237,12 @@ namespace Biblioteca.InterfazForm
             this.Editorial,
             this.Paginas,
             this.Tema});
-            this._dataGridLibros.Location = new System.Drawing.Point(343, 71);
+            this._dataGridLibros.Location = new System.Drawing.Point(386, 89);
+            this._dataGridLibros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._dataGridLibros.Name = "_dataGridLibros";
             this._dataGridLibros.RowHeadersWidth = 51;
             this._dataGridLibros.RowTemplate.Height = 24;
-            this._dataGridLibros.Size = new System.Drawing.Size(645, 533);
+            this._dataGridLibros.Size = new System.Drawing.Size(726, 666);
             this._dataGridLibros.TabIndex = 31;
             // 
             // Titulo
@@ -277,10 +289,10 @@ namespace Biblioteca.InterfazForm
             // 
             // FrmLibros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1000, 830);
+            this.ClientSize = new System.Drawing.Size(1125, 1038);
             this.Controls.Add(this._dataGridLibros);
             this.Controls.Add(this._btnAtras);
             this.Controls.Add(this.pictureBox1);
@@ -300,6 +312,7 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this._btnAlta);
             this.Controls.Add(this._inputApellido);
             this.Controls.Add(this._inputNombre);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmLibros";
             this.Text = "Libros";
             this.Load += new System.EventHandler(this.FrmLibros_Load);

@@ -119,5 +119,15 @@ namespace Biblioteca.InterfazForm
 
             frm3.Show();
         }
+
+        private void _inputDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _inputTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

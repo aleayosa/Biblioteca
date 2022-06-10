@@ -24,3 +24,16 @@ C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Deb
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.CopyComplete
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.dll
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.pdb
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.Negocio.dll
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.Negocio.pdb
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.AccesoADatos.dll
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.Entidades.dll
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.AccesoADatos.pdb
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Biblioteca.Entidades.pdb
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.AssemblyReference.cache
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.csproj.CopyComplete
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.dll
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.Negocio\obj\Debug\Biblioteca.Negocio.pdb
