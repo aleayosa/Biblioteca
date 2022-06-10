@@ -110,46 +110,6 @@ namespace Biblioteca.InterfazForm
             frm3.Show();
         }
 
-        private void _inputLibro_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void _dataGridEjemplares_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void _inputIdLibro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void _inputObservacion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void _inputLibro_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void _inputObservaciones_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void _inputPrecio_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void _inputPrecio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

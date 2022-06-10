@@ -101,7 +101,6 @@ namespace Biblioteca.InterfazForm
             this._dataGridEjemplares.RowTemplate.Height = 24;
             this._dataGridEjemplares.Size = new System.Drawing.Size(381, 250);
             this._dataGridEjemplares.TabIndex = 31;
-            this._dataGridEjemplares.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this._dataGridEjemplares_CellContentClick);
             // 
             // Titulo
             // 
@@ -141,7 +140,6 @@ namespace Biblioteca.InterfazForm
             this._inputObservaciones.Name = "_inputObservaciones";
             this._inputObservaciones.Size = new System.Drawing.Size(175, 22);
             this._inputObservaciones.TabIndex = 34;
-            this._inputObservaciones.TextChanged += new System.EventHandler(this._inputObservacion_TextChanged);
             // 
             // _lblLibro
             // 
@@ -151,7 +149,6 @@ namespace Biblioteca.InterfazForm
             this._lblLibro.Size = new System.Drawing.Size(40, 17);
             this._lblLibro.TabIndex = 16;
             this._lblLibro.Text = "Libro";
-            this._lblLibro.Click += new System.EventHandler(this._inputLibro_Click_1);
             // 
             // _lblObservaciones
             // 
@@ -161,7 +158,6 @@ namespace Biblioteca.InterfazForm
             this._lblObservaciones.Size = new System.Drawing.Size(103, 17);
             this._lblObservaciones.TabIndex = 17;
             this._lblObservaciones.Text = "Observaciones";
-            this._lblObservaciones.Click += new System.EventHandler(this._inputObservaciones_Click);
             // 
             // _inputIdLibro
             // 
@@ -170,17 +166,15 @@ namespace Biblioteca.InterfazForm
             this._inputIdLibro.Name = "_inputIdLibro";
             this._inputIdLibro.Size = new System.Drawing.Size(175, 22);
             this._inputIdLibro.TabIndex = 32;
-            this._inputIdLibro.TextChanged += new System.EventHandler(this._inputPrecio_TextChanged);
             // 
             // _lblPrecio
             // 
             this._lblPrecio.AutoSize = true;
-            this._lblPrecio.Location = new System.Drawing.Point(21, 138);
+            this._lblPrecio.Location = new System.Drawing.Point(13, 138);
             this._lblPrecio.Name = "_lblPrecio";
             this._lblPrecio.Size = new System.Drawing.Size(48, 17);
             this._lblPrecio.TabIndex = 20;
             this._lblPrecio.Text = "Precio";
-            this._lblPrecio.TextChanged += new System.EventHandler(this._inputPrecio_TextChanged);
             // 
             // _inputPrecio
             // 
