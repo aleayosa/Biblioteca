@@ -60,7 +60,7 @@ namespace Biblioteca.InterfazForm
             {
                 if (Validar())
                 {
-                    AltaEjemplar(int.Parse(_inputLibro.Text), _inputObservaciones.Text, int.Parse(_inputPrecio.Text));
+                    AltaEjemplar(int.Parse(_inputIdLibro.Text), _inputObservaciones.Text, int.Parse(_inputPrecio.Text));
                     MessageBox.Show("Se ha generado el nuevo ejemplar");
                     Limpiar();
                     MostrarEjemplares();
@@ -78,7 +78,7 @@ namespace Biblioteca.InterfazForm
 
         private bool Validar()
         {
-            if (string.IsNullOrEmpty(_inputLibro.Text))
+            if (string.IsNullOrEmpty(_inputIdLibro.Text))
                 return false;
             if (string.IsNullOrEmpty(_inputObservaciones.Text))
                 return false;
@@ -90,7 +90,7 @@ namespace Biblioteca.InterfazForm
 
         private void Limpiar()
         {
-            _inputLibro.Text = string.Empty;
+            _inputIdLibro.Text = string.Empty;
             _inputObservaciones.Text = string.Empty;
             _inputPrecio.Text = string.Empty;
             
