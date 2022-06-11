@@ -37,13 +37,14 @@ namespace Biblioteca.InterfazForm
                 List<Cliente> listado = _clienteNegocio.GetLista();
                 _dataGridClientes.Rows.Clear();
                 foreach (Cliente c in listado)
-                {                    
-                        int n = _dataGridClientes.Rows.Add();
-                        _dataGridClientes.Rows[n].Cells[0].Value = c.Nombre;
-                        _dataGridClientes.Rows[n].Cells[1].Value = c.Apellido;
-                        _dataGridClientes.Rows[n].Cells[2].Value = c.Direccion;
-                        _dataGridClientes.Rows[n].Cells[3].Value = c.Telefono;
-                        _dataGridClientes.Rows[n].Cells[4].Value = c.Email;                   
+                {
+                    int n = _dataGridClientes.Rows.Add();
+                    _dataGridClientes.Rows[n].Cells[0].Value = c.Id;
+                    _dataGridClientes.Rows[n].Cells[1].Value = c.Nombre;
+                    _dataGridClientes.Rows[n].Cells[2].Value = c.Apellido;
+                    _dataGridClientes.Rows[n].Cells[3].Value = c.Direccion;
+                    _dataGridClientes.Rows[n].Cells[4].Value = c.Telefono;
+                    _dataGridClientes.Rows[n].Cells[5].Value = c.Email;
                 }
             }
             catch (Exception ex)
@@ -72,7 +73,7 @@ namespace Biblioteca.InterfazForm
             catch (Exception ex)
             {
                 MessageBox.Show("Error al dar alta al cliente " + ex.Message);
-            }                         
+            }
 
         }
 

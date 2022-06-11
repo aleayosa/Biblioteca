@@ -39,12 +39,13 @@ namespace Biblioteca.InterfazForm
                 foreach (Libro l in listado)
                 {
                     int n = _dataGridLibros.Rows.Add();
-                    _dataGridLibros.Rows[n].Cells[0].Value = l.Titulo;
-                    _dataGridLibros.Rows[n].Cells[1].Value = l.Autor;
-                    _dataGridLibros.Rows[n].Cells[2].Value = l.Edicion;
-                    _dataGridLibros.Rows[n].Cells[3].Value = l.Editorial;
-                    _dataGridLibros.Rows[n].Cells[4].Value = l.Paginas;
-                    _dataGridLibros.Rows[n].Cells[5].Value = l.Tema;
+                    _dataGridLibros.Rows[n].Cells[0].Value = l.Id;
+                    _dataGridLibros.Rows[n].Cells[1].Value = l.Titulo;
+                    _dataGridLibros.Rows[n].Cells[2].Value = l.Autor;
+                    _dataGridLibros.Rows[n].Cells[3].Value = l.Edicion;
+                    _dataGridLibros.Rows[n].Cells[4].Value = l.Editorial;
+                    _dataGridLibros.Rows[n].Cells[5].Value = l.Paginas;
+                    _dataGridLibros.Rows[n].Cells[6].Value = l.Tema;
                 }
 
                 
@@ -120,14 +121,5 @@ namespace Biblioteca.InterfazForm
             frm3.Show();
         }
 
-        private void _inputDireccion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void _inputTelefono_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

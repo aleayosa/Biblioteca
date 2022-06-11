@@ -46,6 +46,17 @@ namespace Biblioteca.AccesoADatos
 
             return lst;
         }
+
+        public TransactionResult Eliminar(Prestamo prestamo)
+        {
+            NameValueCollection obj = ReverseMap(prestamo);
+
+            string json = WebHelper.Delete("biblioteca/prestamos", obj);
+
+            TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
+
+            return lst;
+        }
         private NameValueCollection ReverseMap(Prestamo prestamo)
         {
             NameValueCollection n = new NameValueCollection();

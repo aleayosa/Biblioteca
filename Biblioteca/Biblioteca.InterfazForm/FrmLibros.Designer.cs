@@ -47,6 +47,7 @@ namespace Biblioteca.InterfazForm
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._btnAtras = new System.Windows.Forms.Button();
             this._dataGridLibros = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -205,7 +206,7 @@ namespace Biblioteca.InterfazForm
             // _btnAtras
             // 
             this._btnAtras.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnAtras.Location = new System.Drawing.Point(869, 21);
+            this._btnAtras.Location = new System.Drawing.Point(1462, 22);
             this._btnAtras.Name = "_btnAtras";
             this._btnAtras.Size = new System.Drawing.Size(119, 29);
             this._btnAtras.TabIndex = 30;
@@ -217,6 +218,7 @@ namespace Biblioteca.InterfazForm
             // 
             this._dataGridLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this._dataGridLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.Titulo,
             this.Autor,
             this.Edicion,
@@ -227,8 +229,15 @@ namespace Biblioteca.InterfazForm
             this._dataGridLibros.Name = "_dataGridLibros";
             this._dataGridLibros.RowHeadersWidth = 51;
             this._dataGridLibros.RowTemplate.Height = 24;
-            this._dataGridLibros.Size = new System.Drawing.Size(645, 533);
+            this._dataGridLibros.Size = new System.Drawing.Size(1238, 678);
             this._dataGridLibros.TabIndex = 31;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Width = 125;
             // 
             // Titulo
             // 
@@ -286,7 +295,7 @@ namespace Biblioteca.InterfazForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1000, 830);
+            this.ClientSize = new System.Drawing.Size(1607, 775);
             this.Controls.Add(this._dataGridLibros);
             this.Controls.Add(this._btnAtras);
             this.Controls.Add(this.pictureBox1);
@@ -308,6 +317,8 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this._inputTitulo1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmLibros";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Libros";
             this.Load += new System.EventHandler(this.FrmLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -337,12 +348,13 @@ namespace Biblioteca.InterfazForm
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button _btnAtras;
         private System.Windows.Forms.DataGridView _dataGridLibros;
+        private System.Windows.Forms.Label _inputTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edicion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paginas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
-        private System.Windows.Forms.Label _inputTitulo;
     }
 }

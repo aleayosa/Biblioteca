@@ -17,6 +17,7 @@ namespace Biblioteca.InterfazForm
         private PrestamoNegocio _prestamoNegocio;
         private LibroNegocio _libroNegocio;
         private ClienteNegocio _clienteNegocio;
+        private EjemplarNegocio _ejemplarNegocio;
 
         public FrmReportesPXC()
         {
@@ -25,32 +26,52 @@ namespace Biblioteca.InterfazForm
             _prestamoNegocio = new PrestamoNegocio();
             _libroNegocio = new LibroNegocio();
             _clienteNegocio = new ClienteNegocio();
+            _ejemplarNegocio = new EjemplarNegocio();
 
         }
 
         private void _btnPxC_Click(object sender, EventArgs e)
         {
-            List<Cliente> listadoClientes = _clienteNegocio.GetLista();
-            for(var i=0; i<listadoClientes.Count; i++)
+            int idCliente = 0;
+            List<Libro> listadoLibros = _libroNegocio.GetLista(); ;
+            List <Cliente> listadoClientes = _clienteNegocio.GetLista();
+            List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
+            for (var i=0; i<listadoClientes.Count; i++)
             {
                 if(listadoClientes[i].Id == int.Parse(_inputReporteCliente.Text))
                 {
-                    _lblNombreCliente.Text = listadoClientes[i].Apellido + ", " + listadoClientes[i].Nombre;
+                    idCliente = i;
                 }
             }
+            _lblNombreCliente.Text = listadoClientes[idCliente].Apellido + ", " + listadoClientes[idCliente].Nombre;
+
             List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
 
             _dataGridReportePrestamos.Rows.Clear();
             foreach (Prestamo p in listadoPrestamo)
             {
-                if( p.IdCliente == int.Parse(_inputReporteCliente.Text))
+                if (p.IdCliente == listadoClientes[idCliente].Id)
                 {
-                    int n = _dataGridReportePrestamos.Rows.Add();
-                    _dataGridReportePrestamos.Rows[n].Cells[0].Value = p.FechaAlta;
-                    _dataGridReportePrestamos.Rows[n].Cells[1].Value = p.FechaBaja;
-                    _dataGridReportePrestamos.Rows[n].Cells[2].Value = p.IdEjemplar;
-                    _dataGridReportePrestamos.Rows[n].Cells[3].Value = p.IdCliente;
-                    _dataGridReportePrestamos.Rows[n].Cells[4].Value = p.Plazo;
+
+                    for (var i = 0; i < listadoEjemplares.Count; i++)
+                    {
+                        if (listadoEjemplares[i].Id == p.IdEjemplar)
+                        {
+                            for (var j = 0; j < listadoLibros.Count; j++)
+                            {
+                                if (listadoLibros[j].Id == listadoEjemplares[i].IdLibro)
+                                {
+                                    int n = _dataGridReportePrestamos.Rows.Add();
+                                    _dataGridReportePrestamos.Rows[n].Cells[0].Value = p.Id;
+                                    _dataGridReportePrestamos.Rows[n].Cells[1].Value = listadoLibros[j].Titulo;
+                                    _dataGridReportePrestamos.Rows[n].Cells[2].Value = listadoLibros[j].Autor;
+                                    _dataGridReportePrestamos.Rows[n].Cells[3].Value = p.IdEjemplar;
+                                    _dataGridReportePrestamos.Rows[n].Cells[4].Value = p.FechaAlta;
+                                    _dataGridReportePrestamos.Rows[n].Cells[5].Value = p.FechaBaja;
+                                }
+                            }    
+                        }
+                    }                    
                 }              
 
             }

@@ -45,7 +45,7 @@ namespace Biblioteca.InterfazForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 117);
+            this.label1.Location = new System.Drawing.Point(463, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(387, 88);
             this.label1.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace Biblioteca.InterfazForm
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(215, 76);
+            this.label2.Location = new System.Drawing.Point(532, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(232, 40);
             this.label2.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace Biblioteca.InterfazForm
             // 
             // _btnClientes
             // 
-            this._btnClientes.Location = new System.Drawing.Point(130, 241);
+            this._btnClientes.Location = new System.Drawing.Point(447, 286);
             this._btnClientes.Name = "_btnClientes";
             this._btnClientes.Size = new System.Drawing.Size(157, 53);
             this._btnClientes.TabIndex = 3;
@@ -73,7 +73,7 @@ namespace Biblioteca.InterfazForm
             // 
             // _btnLibros
             // 
-            this._btnLibros.Location = new System.Drawing.Point(338, 241);
+            this._btnLibros.Location = new System.Drawing.Point(655, 286);
             this._btnLibros.Name = "_btnLibros";
             this._btnLibros.Size = new System.Drawing.Size(157, 53);
             this._btnLibros.TabIndex = 4;
@@ -83,7 +83,7 @@ namespace Biblioteca.InterfazForm
             // 
             // _btnEjemplares
             // 
-            this._btnEjemplares.Location = new System.Drawing.Point(338, 320);
+            this._btnEjemplares.Location = new System.Drawing.Point(655, 365);
             this._btnEjemplares.Name = "_btnEjemplares";
             this._btnEjemplares.Size = new System.Drawing.Size(157, 53);
             this._btnEjemplares.TabIndex = 5;
@@ -93,7 +93,7 @@ namespace Biblioteca.InterfazForm
             // 
             // _btnPrestamos
             // 
-            this._btnPrestamos.Location = new System.Drawing.Point(130, 320);
+            this._btnPrestamos.Location = new System.Drawing.Point(447, 365);
             this._btnPrestamos.Name = "_btnPrestamos";
             this._btnPrestamos.Size = new System.Drawing.Size(157, 53);
             this._btnPrestamos.TabIndex = 6;
@@ -103,7 +103,7 @@ namespace Biblioteca.InterfazForm
             // 
             // _btnReportesPrestamos
             // 
-            this._btnReportesPrestamos.Location = new System.Drawing.Point(130, 400);
+            this._btnReportesPrestamos.Location = new System.Drawing.Point(447, 445);
             this._btnReportesPrestamos.Name = "_btnReportesPrestamos";
             this._btnReportesPrestamos.Size = new System.Drawing.Size(157, 53);
             this._btnReportesPrestamos.TabIndex = 7;
@@ -115,7 +115,7 @@ namespace Biblioteca.InterfazForm
             // 
             this.pictureBox1.Image = global::Biblioteca.InterfazForm.Properties.Resources.Jeremias;
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(587, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(904, 99);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(281, 533);
             this.pictureBox1.TabIndex = 2;
@@ -123,7 +123,7 @@ namespace Biblioteca.InterfazForm
             // 
             // _btnReporteEjemplares
             // 
-            this._btnReporteEjemplares.Location = new System.Drawing.Point(338, 400);
+            this._btnReporteEjemplares.Location = new System.Drawing.Point(655, 445);
             this._btnReporteEjemplares.Name = "_btnReporteEjemplares";
             this._btnReporteEjemplares.Size = new System.Drawing.Size(157, 53);
             this._btnReporteEjemplares.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace Biblioteca.InterfazForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1000, 830);
+            this.ClientSize = new System.Drawing.Size(1632, 780);
             this.Controls.Add(this._btnReporteEjemplares);
             this.Controls.Add(this._btnReportesPrestamos);
             this.Controls.Add(this._btnPrestamos);
@@ -146,6 +146,7 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmBiblioteca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Bienvenidos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

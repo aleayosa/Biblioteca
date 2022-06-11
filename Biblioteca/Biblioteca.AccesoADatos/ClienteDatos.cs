@@ -25,13 +25,6 @@ namespace Biblioteca.AccesoADatos
             List<Cliente> resultado = MapList(json2);
             return resultado;
         }
-        public Cliente TraerPorTelefono(string telefono)
-        {
-            string json2 = WebHelper.Get("cliente/" + telefono + "/telefono"); // trae un texto en formato json de una web
-            Cliente resultado = MapObj(json2);
-            return resultado;
-        }
-
 
         private List<Cliente> MapList(string json)
         {

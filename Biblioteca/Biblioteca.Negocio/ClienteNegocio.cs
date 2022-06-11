@@ -24,12 +24,6 @@ namespace Biblioteca.Negocio
             return list;
         }
 
-        public Cliente GetPorTelefono(string telefono)
-        {
-            Cliente cli = _clienteDatos.TraerPorTelefono(telefono);
-
-            return cli;
-        }
 
         public void Alta(string nombre, string apellido, string direccion, string telefono, string email)
         {

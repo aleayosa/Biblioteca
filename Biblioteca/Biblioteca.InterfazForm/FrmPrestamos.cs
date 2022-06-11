@@ -15,12 +15,19 @@ namespace Biblioteca.InterfazForm
     public partial class FrmPrestamos : Form
     {
         private PrestamoNegocio _prestamoNegocio;
+        private LibroNegocio _libroNegocio;
+        private ClienteNegocio _clienteNegocio;
+        private EjemplarNegocio _ejemplarNegocio;
         public FrmPrestamos()
         {
             InitializeComponent();
 
             _prestamoNegocio = new PrestamoNegocio();
+            _libroNegocio = new LibroNegocio();
+            _clienteNegocio = new ClienteNegocio();
+            _ejemplarNegocio = new EjemplarNegocio();
         }
+
 
         private void _btnAlta_Click(object sender, EventArgs e)
         {
@@ -42,7 +49,7 @@ namespace Biblioteca.InterfazForm
             {
                 MessageBox.Show("Error al dar alta el préstamo: " + ex.Message);
             }
-            
+
         }
         private void AltaPrestamo(int idCliente, int idEjemplar, int plazo)
         {
@@ -54,18 +61,41 @@ namespace Biblioteca.InterfazForm
         {
             try
             {
+
                 string prestamo = string.Empty;
 
-                List<Prestamo> listado = _prestamoNegocio.GetLista();
+                List<Libro> listadoLibros = _libroNegocio.GetLista();
+                List<Cliente> listadoClientes = _clienteNegocio.GetLista();
+                List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
+                List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
+
                 _dataGridPrestamos.Rows.Clear();
-                foreach (Prestamo p in listado)
+                foreach (Prestamo p in listadoPrestamo)
                 {
-                    int n = _dataGridPrestamos.Rows.Add();
-                    _dataGridPrestamos.Rows[n].Cells[0].Value = p.IdCliente;
-                    _dataGridPrestamos.Rows[n].Cells[1].Value = p.IdEjemplar;
-                    _dataGridPrestamos.Rows[n].Cells[2].Value = p.FechaAlta;
-                    _dataGridPrestamos.Rows[n].Cells[3].Value = p.FechaBaja;
-                    _dataGridPrestamos.Rows[n].Cells[4].Value = p.FechaBajaReal;
+                    for (var i = 0; i < listadoEjemplares.Count; i++)
+                    {
+                        if (listadoEjemplares[i].Id == p.IdEjemplar)
+                        {
+                            for (var j = 0; j < listadoLibros.Count; j++)
+                            {
+                                if (listadoLibros[j].Id == listadoEjemplares[i].IdLibro)
+                                {
+                                    int n = _dataGridPrestamos.Rows.Add();
+                                    _dataGridPrestamos.Rows[n].Cells[0].Value = p.Id;
+                                    _dataGridPrestamos.Rows[n].Cells[1].Value = p.IdCliente;
+                                    _dataGridPrestamos.Rows[n].Cells[2].Value = p.IdEjemplar;
+                                    _dataGridPrestamos.Rows[n].Cells[3].Value = listadoLibros[j].Titulo;
+                                    _dataGridPrestamos.Rows[n].Cells[4].Value = listadoLibros[j].Autor;
+                                    _dataGridPrestamos.Rows[n].Cells[5].Value = p.FechaAlta;
+                                    _dataGridPrestamos.Rows[n].Cells[6].Value = p.FechaBaja;
+                                    _dataGridPrestamos.Rows[n].Cells[7].Value = p.FechaBajaReal;
+
+
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -105,6 +135,30 @@ namespace Biblioteca.InterfazForm
         private void FrmPrestamos_Load(object sender, EventArgs e)
         {
             MostrarPrestamo();
+        }
+
+        private void _btnEliminarLibro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
+
+                foreach (Prestamo p in listadoPrestamo)
+                {
+                    if (p.Id == int.Parse(_inputIdPrestamoEliminar.Text))
+                    {
+                        _prestamoNegocio.Eliminar(p);
+                    }
+                }
+
+                MostrarPrestamo();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al eliminar el préstamo: " + ex.Message);
+            }
+
         }
     }
 }

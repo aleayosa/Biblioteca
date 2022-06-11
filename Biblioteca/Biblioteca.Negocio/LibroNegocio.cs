@@ -38,5 +38,21 @@ namespace Biblioteca.Negocio
             if (!transaction.IsOk)
                 throw new Exception(transaction.Error);
         }
+
+        public void Modificar(string titulo, string autor, int edicion, string editorial, int paginas, string temas)
+        {
+            Libro libro = new Libro();
+            libro.Titulo = titulo;
+            libro.Autor = autor;
+            libro.Edicion = edicion;
+            libro.Editorial = editorial;
+            libro.Paginas = paginas;
+            libro.Tema = temas;
+            TransactionResult transaction = _libroDatos.Actualizar(libro);
+
+            if (!transaction.IsOk)
+                throw new Exception(transaction.Error);
+        }
+
     }
 }

@@ -80,7 +80,7 @@ namespace Biblioteca.InterfazForm
             // _btnAtras
             // 
             this._btnAtras.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnAtras.Location = new System.Drawing.Point(665, 19);
+            this._btnAtras.Location = new System.Drawing.Point(1484, 17);
             this._btnAtras.Name = "_btnAtras";
             this._btnAtras.Size = new System.Drawing.Size(119, 29);
             this._btnAtras.TabIndex = 30;
@@ -99,7 +99,7 @@ namespace Biblioteca.InterfazForm
             this._dataGridEjemplares.Name = "_dataGridEjemplares";
             this._dataGridEjemplares.RowHeadersWidth = 51;
             this._dataGridEjemplares.RowTemplate.Height = 24;
-            this._dataGridEjemplares.Size = new System.Drawing.Size(381, 250);
+            this._dataGridEjemplares.Size = new System.Drawing.Size(1200, 683);
             this._dataGridEjemplares.TabIndex = 31;
             // 
             // Titulo
@@ -189,7 +189,7 @@ namespace Biblioteca.InterfazForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 664);
+            this.ClientSize = new System.Drawing.Size(1635, 779);
             this.Controls.Add(this._inputPrecio);
             this.Controls.Add(this._inputObservaciones);
             this.Controls.Add(this._dataGridEjemplares);
@@ -203,6 +203,7 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this._lblLibro);
             this.Controls.Add(this._btnAlta);
             this.Name = "FrmEjemplares";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Ejemplares";
             this.Load += new System.EventHandler(this.FrmEjemplares_Load);
             ((System.ComponentModel.ISupportInitialize)(this._dataGridEjemplares)).EndInit();

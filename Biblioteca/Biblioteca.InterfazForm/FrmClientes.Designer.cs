@@ -33,6 +33,7 @@ namespace Biblioteca.InterfazForm
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._btnVolver = new System.Windows.Forms.Button();
             this._dataGridClientes = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,7 +78,7 @@ namespace Biblioteca.InterfazForm
             // _btnVolver
             // 
             this._btnVolver.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnVolver.Location = new System.Drawing.Point(869, 18);
+            this._btnVolver.Location = new System.Drawing.Point(1459, 18);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(119, 29);
             this._btnVolver.TabIndex = 17;
@@ -89,6 +90,7 @@ namespace Biblioteca.InterfazForm
             // 
             this._dataGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this._dataGridClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Nombre,
             this.Apellido,
             this.Direccion,
@@ -98,8 +100,15 @@ namespace Biblioteca.InterfazForm
             this._dataGridClientes.Name = "_dataGridClientes";
             this._dataGridClientes.RowHeadersWidth = 51;
             this._dataGridClientes.RowTemplate.Height = 24;
-            this._dataGridClientes.Size = new System.Drawing.Size(643, 511);
+            this._dataGridClientes.Size = new System.Drawing.Size(1234, 717);
             this._dataGridClientes.TabIndex = 18;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
             // 
             // Nombre
             // 
@@ -240,7 +249,7 @@ namespace Biblioteca.InterfazForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 830);
+            this.ClientSize = new System.Drawing.Size(1613, 830);
             this.Controls.Add(this._dataGridClientes);
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this.pictureBox1);
@@ -258,6 +267,7 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this._inputApellido);
             this.Controls.Add(this._inputNombre);
             this.Name = "FrmClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FrmAltaCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -272,11 +282,6 @@ namespace Biblioteca.InterfazForm
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button _btnVolver;
         private System.Windows.Forms.DataGridView _dataGridClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.TextBox _inputNombre;
         private System.Windows.Forms.TextBox _inputApellido;
         private System.Windows.Forms.Button _btnAlta;
@@ -289,5 +294,11 @@ namespace Biblioteca.InterfazForm
         private System.Windows.Forms.TextBox _inputEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

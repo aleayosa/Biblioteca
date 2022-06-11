@@ -37,5 +37,28 @@ namespace Biblioteca.Negocio
             if (!transaction.IsOk)
                 throw new Exception(transaction.Error);
         }
+
+        public void Eliminar(Prestamo p)
+        {
+
+            TransactionResult transaction = _prestamoDatos.Eliminar(p);
+
+            if (!transaction.IsOk)
+                throw new Exception(transaction.Error);
+        }
+
+        public void Modificar(int idCliente, int idEjemplar, int plazo)
+        {
+            Prestamo prestamo = new Prestamo();
+            prestamo.IdCliente = idCliente;
+            prestamo.IdEjemplar = idEjemplar;
+            prestamo.Plazo = plazo;
+            prestamo.FechaAlta = DateTime.Now;
+            prestamo.FechaBaja = DateTime.Now.AddDays(plazo);
+            TransactionResult transaction = _prestamoDatos.Insertar(prestamo);
+
+            if (!transaction.IsOk)
+                throw new Exception(transaction.Error);
+        }
     }
 }

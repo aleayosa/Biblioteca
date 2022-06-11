@@ -34,13 +34,14 @@ namespace Biblioteca.InterfazForm
             this._dataGridReportePrestamos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this._lblNombreCliente = new System.Windows.Forms.Label();
+            this._btnPxC = new System.Windows.Forms.Button();
+            this._btnVolver5 = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ejemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._btnPxC = new System.Windows.Forms.Button();
-            this._btnVolver5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridReportePrestamos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@ namespace Biblioteca.InterfazForm
             // 
             this._dataGridReportePrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this._dataGridReportePrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Titulo,
             this.Autor,
             this.Ejemplar,
@@ -74,7 +76,7 @@ namespace Biblioteca.InterfazForm
             this._dataGridReportePrestamos.Name = "_dataGridReportePrestamos";
             this._dataGridReportePrestamos.RowHeadersWidth = 51;
             this._dataGridReportePrestamos.RowTemplate.Height = 24;
-            this._dataGridReportePrestamos.Size = new System.Drawing.Size(678, 357);
+            this._dataGridReportePrestamos.Size = new System.Drawing.Size(1378, 675);
             this._dataGridReportePrestamos.TabIndex = 2;
             // 
             // label2
@@ -94,8 +96,36 @@ namespace Biblioteca.InterfazForm
             this._lblNombreCliente.ForeColor = System.Drawing.Color.Blue;
             this._lblNombreCliente.Location = new System.Drawing.Point(424, 26);
             this._lblNombreCliente.Name = "_lblNombreCliente";
-            this._lblNombreCliente.Size = new System.Drawing.Size(0, 31);
+            this._lblNombreCliente.Size = new System.Drawing.Size(0, 25);
             this._lblNombreCliente.TabIndex = 4;
+            // 
+            // _btnPxC
+            // 
+            this._btnPxC.Location = new System.Drawing.Point(16, 117);
+            this._btnPxC.Name = "_btnPxC";
+            this._btnPxC.Size = new System.Drawing.Size(84, 32);
+            this._btnPxC.TabIndex = 5;
+            this._btnPxC.Text = "Buscar";
+            this._btnPxC.UseVisualStyleBackColor = true;
+            this._btnPxC.Click += new System.EventHandler(this._btnPxC_Click);
+            // 
+            // _btnVolver5
+            // 
+            this._btnVolver5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this._btnVolver5.Location = new System.Drawing.Point(1473, 26);
+            this._btnVolver5.Name = "_btnVolver5";
+            this._btnVolver5.Size = new System.Drawing.Size(119, 29);
+            this._btnVolver5.TabIndex = 18;
+            this._btnVolver5.Text = "Volver";
+            this._btnVolver5.UseVisualStyleBackColor = false;
+            this._btnVolver5.Click += new System.EventHandler(this._btnVolver5_Click);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
             // 
             // Titulo
             // 
@@ -132,32 +162,11 @@ namespace Biblioteca.InterfazForm
             this.FechaBaja.Name = "FechaBaja";
             this.FechaBaja.Width = 125;
             // 
-            // _btnPxC
-            // 
-            this._btnPxC.Location = new System.Drawing.Point(16, 117);
-            this._btnPxC.Name = "_btnPxC";
-            this._btnPxC.Size = new System.Drawing.Size(84, 32);
-            this._btnPxC.TabIndex = 5;
-            this._btnPxC.Text = "Buscar";
-            this._btnPxC.UseVisualStyleBackColor = true;
-            this._btnPxC.Click += new System.EventHandler(this._btnPxC_Click);
-            // 
-            // _btnVolver5
-            // 
-            this._btnVolver5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnVolver5.Location = new System.Drawing.Point(773, 22);
-            this._btnVolver5.Name = "_btnVolver5";
-            this._btnVolver5.Size = new System.Drawing.Size(119, 29);
-            this._btnVolver5.TabIndex = 18;
-            this._btnVolver5.Text = "Volver";
-            this._btnVolver5.UseVisualStyleBackColor = false;
-            this._btnVolver5.Click += new System.EventHandler(this._btnVolver5_Click);
-            // 
             // FrmReportesPXC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 450);
+            this.ClientSize = new System.Drawing.Size(1620, 771);
             this.Controls.Add(this._btnVolver5);
             this.Controls.Add(this._btnPxC);
             this.Controls.Add(this._lblNombreCliente);
@@ -166,6 +175,8 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this._inputReporteCliente);
             this.Controls.Add(this.label1);
             this.Name = "FrmReportesPXC";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Préstamos Por Cliente";
             ((System.ComponentModel.ISupportInitialize)(this._dataGridReportePrestamos)).EndInit();
             this.ResumeLayout(false);
@@ -178,14 +189,15 @@ namespace Biblioteca.InterfazForm
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox _inputReporteCliente;
         private System.Windows.Forms.DataGridView _dataGridReportePrestamos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label _lblNombreCliente;
+        private System.Windows.Forms.Button _btnPxC;
+        private System.Windows.Forms.Button _btnVolver5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ejemplar;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaBaja;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label _lblNombreCliente;
-        private System.Windows.Forms.Button _btnPxC;
-        private System.Windows.Forms.Button _btnVolver5;
     }
 }

@@ -52,6 +52,8 @@ namespace Biblioteca.AccesoADatos
 
             return lst;
         }
+
+
         private NameValueCollection ReverseMap(Libro libros)
         {
             NameValueCollection n = new NameValueCollection();
