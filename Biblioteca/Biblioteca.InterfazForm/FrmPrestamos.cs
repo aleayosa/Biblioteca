@@ -61,7 +61,6 @@ namespace Biblioteca.InterfazForm
         {
             try
             {
-
                 string prestamo = string.Empty;
 
                 List<Libro> listadoLibros = _libroNegocio.GetLista();
@@ -80,9 +79,14 @@ namespace Biblioteca.InterfazForm
                             {
                                 if (listadoLibros[j].Id == listadoEjemplares[i].IdLibro)
                                 {
+
                                     int n = _dataGridPrestamos.Rows.Add();
                                     _dataGridPrestamos.Rows[n].Cells[0].Value = p.Id;
-                                    _dataGridPrestamos.Rows[n].Cells[1].Value = p.IdCliente;
+                                    foreach (Cliente c in listadoClientes)
+                                    {
+                                        if (c.Id == p.IdCliente)
+                                            _dataGridPrestamos.Rows[n].Cells[1].Value = c.Apellido + ", " + c.Nombre;
+                                    }
                                     _dataGridPrestamos.Rows[n].Cells[2].Value = p.IdEjemplar;
                                     _dataGridPrestamos.Rows[n].Cells[3].Value = listadoLibros[j].Titulo;
                                     _dataGridPrestamos.Rows[n].Cells[4].Value = listadoLibros[j].Autor;
