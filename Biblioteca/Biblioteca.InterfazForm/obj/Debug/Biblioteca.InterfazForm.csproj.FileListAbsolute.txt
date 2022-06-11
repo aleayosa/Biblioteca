@@ -65,3 +65,6 @@ C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\ob
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmPrestamos.resources
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmReportesEXL.resources
 C:\Users\aleay\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmReportesPXC.resources
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmPrestamos.resources
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmReportesEXL.resources
+C:\Users\silvi\Documents\GitHub\Biblioteca\Biblioteca\Biblioteca.InterfazForm\obj\Debug\Biblioteca.InterfazForm.FrmReportesPXC.resources
