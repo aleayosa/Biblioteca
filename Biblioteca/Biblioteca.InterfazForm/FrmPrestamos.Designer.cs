@@ -53,6 +53,10 @@ namespace Biblioteca.InterfazForm
             this.label8 = new System.Windows.Forms.Label();
             this._btnEliminarLibro = new System.Windows.Forms.Button();
             this._inputIdPrestamoEliminar = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this._inputIdFinalizado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -249,7 +253,7 @@ namespace Biblioteca.InterfazForm
             // 
             // _btnEliminarLibro
             // 
-            this._btnEliminarLibro.Location = new System.Drawing.Point(183, 291);
+            this._btnEliminarLibro.Location = new System.Drawing.Point(216, 288);
             this._btnEliminarLibro.Name = "_btnEliminarLibro";
             this._btnEliminarLibro.Size = new System.Drawing.Size(112, 23);
             this._btnEliminarLibro.TabIndex = 37;
@@ -262,14 +266,55 @@ namespace Biblioteca.InterfazForm
             this._inputIdPrestamoEliminar.Location = new System.Drawing.Point(92, 261);
             this._inputIdPrestamoEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._inputIdPrestamoEliminar.Name = "_inputIdPrestamoEliminar";
-            this._inputIdPrestamoEliminar.Size = new System.Drawing.Size(203, 22);
+            this._inputIdPrestamoEliminar.Size = new System.Drawing.Size(236, 22);
             this._inputIdPrestamoEliminar.TabIndex = 36;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(22, 372);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(313, 24);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "Ingrese el ID del Préstamo finalizado";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(23, 407);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 17);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "ID";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(216, 434);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 23);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Finalizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // _inputIdFinalizado
+            // 
+            this._inputIdFinalizado.Location = new System.Drawing.Point(92, 407);
+            this._inputIdFinalizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._inputIdFinalizado.Name = "_inputIdFinalizado";
+            this._inputIdFinalizado.Size = new System.Drawing.Size(236, 22);
+            this._inputIdFinalizado.TabIndex = 40;
             // 
             // FrmPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1620, 778);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this._inputIdFinalizado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
             this.Controls.Add(this._btnEliminarLibro);
@@ -323,5 +368,9 @@ namespace Biblioteca.InterfazForm
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button _btnEliminarLibro;
         private System.Windows.Forms.TextBox _inputIdPrestamoEliminar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox _inputIdFinalizado;
     }
 }

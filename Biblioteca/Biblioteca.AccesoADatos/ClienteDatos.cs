@@ -32,12 +32,6 @@ namespace Biblioteca.AccesoADatos
             return lst;
         }
 
-        private Cliente MapObj(string json)
-        {
-            Cliente lst = JsonConvert.DeserializeObject<Cliente>(json); // deserializacion
-            return lst;
-        }
-
         public TransactionResult Insertar(Cliente cliente)
         {
             NameValueCollection obj = ReverseMap(cliente); //serializacion -> json

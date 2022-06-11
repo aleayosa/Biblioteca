@@ -64,9 +64,9 @@ namespace Biblioteca.AccesoADatos
             n.Add("idCliente", prestamo.IdCliente.ToString());
             n.Add("idEjemplar", prestamo.IdEjemplar.ToString());
             n.Add("Plazo", prestamo.Plazo.ToString());
-            n.Add("FechaPrestamo", prestamo.FechaAlta.ToString("yyyy-MM-dd"));
-            n.Add("FechaDevolucionReal", prestamo.FechaBajaReal.ToString("yyyy-MM-dd"));
-            n.Add("FechaDevolucionTentativa", prestamo.FechaBaja.ToString("yyyy-MM-dd"));
+            n.Add("FechaPrestamo", prestamo.FechaPrestamo.ToString("yyyy-MM-dd"));
+            n.Add("FechaDevolucionReal", prestamo.FechaDevolucionReal.ToString("yyyy-MM-dd"));
+            n.Add("FechaDevolucionTentativa", prestamo.FechaDevolucionTentativa.ToString("yyyy-MM-dd"));
             return n;
         }
     }

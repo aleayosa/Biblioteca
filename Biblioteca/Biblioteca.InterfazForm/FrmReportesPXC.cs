@@ -66,8 +66,8 @@ namespace Biblioteca.InterfazForm
                                     _dataGridReportePrestamos.Rows[n].Cells[1].Value = listadoLibros[j].Titulo;
                                     _dataGridReportePrestamos.Rows[n].Cells[2].Value = listadoLibros[j].Autor;
                                     _dataGridReportePrestamos.Rows[n].Cells[3].Value = p.IdEjemplar;
-                                    _dataGridReportePrestamos.Rows[n].Cells[4].Value = p.FechaAlta;
-                                    _dataGridReportePrestamos.Rows[n].Cells[5].Value = p.FechaBaja;
+                                    _dataGridReportePrestamos.Rows[n].Cells[4].Value = p.FechaPrestamo;
+                                    _dataGridReportePrestamos.Rows[n].Cells[5].Value = p.FechaDevolucionTentativa;
                                 }
                             }    
                         }

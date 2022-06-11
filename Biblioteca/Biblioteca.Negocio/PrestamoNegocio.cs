@@ -30,8 +30,8 @@ namespace Biblioteca.Negocio
             prestamo.IdCliente = idCliente;
             prestamo.IdEjemplar = idEjemplar;
             prestamo.Plazo = plazo;
-            prestamo.FechaAlta = DateTime.Now;
-            prestamo.FechaBaja = DateTime.Now.AddDays(plazo);
+            prestamo.FechaPrestamo = DateTime.Now;
+            prestamo.FechaDevolucionTentativa = DateTime.Now.AddDays(plazo);
             TransactionResult transaction = _prestamoDatos.Insertar(prestamo);
 
             if (!transaction.IsOk)
@@ -47,15 +47,9 @@ namespace Biblioteca.Negocio
                 throw new Exception(transaction.Error);
         }
 
-        public void Modificar(int idCliente, int idEjemplar, int plazo)
+        public void Modificar(Prestamo p)
         {
-            Prestamo prestamo = new Prestamo();
-            prestamo.IdCliente = idCliente;
-            prestamo.IdEjemplar = idEjemplar;
-            prestamo.Plazo = plazo;
-            prestamo.FechaAlta = DateTime.Now;
-            prestamo.FechaBaja = DateTime.Now.AddDays(plazo);
-            TransactionResult transaction = _prestamoDatos.Insertar(prestamo);
+            TransactionResult transaction = _prestamoDatos.Actualizar(p);
 
             if (!transaction.IsOk)
                 throw new Exception(transaction.Error);
