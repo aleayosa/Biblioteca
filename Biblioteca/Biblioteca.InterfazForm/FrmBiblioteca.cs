@@ -61,5 +61,14 @@ namespace Biblioteca.InterfazForm
 
             frm4.Show();
         }
+
+        private void _btnReporteEjemplares_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FrmReportesEXL frm5 = new FrmReportesEXL();
+
+            frm5.Show();
+        }
     }
 }

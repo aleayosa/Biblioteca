@@ -59,18 +59,19 @@ namespace Biblioteca.InterfazForm
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(352, 18);
+            this.label7.Location = new System.Drawing.Point(396, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(168, 24);
+            this.label7.Size = new System.Drawing.Size(200, 29);
             this.label7.TabIndex = 15;
             this.label7.Text = "Listado de Clientes";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Biblioteca.InterfazForm.Properties.Resources.Springfield;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 262);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 328);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(315, 314);
+            this.pictureBox1.Size = new System.Drawing.Size(354, 392);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -80,7 +81,7 @@ namespace Biblioteca.InterfazForm
             this._btnVolver.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this._btnVolver.Location = new System.Drawing.Point(1459, 18);
             this._btnVolver.Name = "_btnVolver";
-            this._btnVolver.Size = new System.Drawing.Size(119, 29);
+            this._btnVolver.Size = new System.Drawing.Size(134, 36);
             this._btnVolver.TabIndex = 17;
             this._btnVolver.Text = "Volver";
             this._btnVolver.UseVisualStyleBackColor = false;
@@ -96,12 +97,14 @@ namespace Biblioteca.InterfazForm
             this.Direccion,
             this.Telefono,
             this.Email});
-            this._dataGridClientes.Location = new System.Drawing.Point(344, 64);
+            this._dataGridClientes.Location = new System.Drawing.Point(387, 80);
+            this._dataGridClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._dataGridClientes.Name = "_dataGridClientes";
             this._dataGridClientes.RowHeadersWidth = 51;
             this._dataGridClientes.RowTemplate.Height = 24;
             this._dataGridClientes.Size = new System.Drawing.Size(1234, 717);
             this._dataGridClientes.TabIndex = 18;
+            this._dataGridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this._dataGridClientes_CellContentClick);
             // 
             // Id
             // 
@@ -147,23 +150,26 @@ namespace Biblioteca.InterfazForm
             // 
             // _inputNombre
             // 
-            this._inputNombre.Location = new System.Drawing.Point(87, 65);
+            this._inputNombre.Location = new System.Drawing.Point(98, 81);
+            this._inputNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputNombre.Name = "_inputNombre";
-            this._inputNombre.Size = new System.Drawing.Size(228, 22);
+            this._inputNombre.Size = new System.Drawing.Size(256, 26);
             this._inputNombre.TabIndex = 0;
             // 
             // _inputApellido
             // 
-            this._inputApellido.Location = new System.Drawing.Point(87, 93);
+            this._inputApellido.Location = new System.Drawing.Point(98, 116);
+            this._inputApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputApellido.Name = "_inputApellido";
-            this._inputApellido.Size = new System.Drawing.Size(228, 22);
+            this._inputApellido.Size = new System.Drawing.Size(256, 26);
             this._inputApellido.TabIndex = 1;
             // 
             // _btnAlta
             // 
-            this._btnAlta.Location = new System.Drawing.Point(198, 220);
+            this._btnAlta.Location = new System.Drawing.Point(223, 275);
+            this._btnAlta.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnAlta.Name = "_btnAlta";
-            this._btnAlta.Size = new System.Drawing.Size(112, 23);
+            this._btnAlta.Size = new System.Drawing.Size(126, 29);
             this._btnAlta.TabIndex = 2;
             this._btnAlta.Text = "Crear";
             this._btnAlta.UseVisualStyleBackColor = true;
@@ -172,66 +178,69 @@ namespace Biblioteca.InterfazForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 68);
+            this.label1.Location = new System.Drawing.Point(17, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 17);
+            this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 97);
+            this.label2.Location = new System.Drawing.Point(17, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Apellido";
             // 
             // _inputDireccion
             // 
-            this._inputDireccion.Location = new System.Drawing.Point(87, 124);
+            this._inputDireccion.Location = new System.Drawing.Point(98, 155);
+            this._inputDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputDireccion.Name = "_inputDireccion";
-            this._inputDireccion.Size = new System.Drawing.Size(228, 22);
+            this._inputDireccion.Size = new System.Drawing.Size(256, 26);
             this._inputDireccion.TabIndex = 5;
             // 
             // _inputTelefono
             // 
-            this._inputTelefono.Location = new System.Drawing.Point(87, 152);
+            this._inputTelefono.Location = new System.Drawing.Point(98, 190);
+            this._inputTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputTelefono.Name = "_inputTelefono";
-            this._inputTelefono.Size = new System.Drawing.Size(228, 22);
+            this._inputTelefono.Size = new System.Drawing.Size(256, 26);
             this._inputTelefono.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 127);
+            this.label4.Location = new System.Drawing.Point(17, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Dirección";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 156);
+            this.label3.Location = new System.Drawing.Point(17, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 17);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Teléfono";
             // 
             // _inputEmail
             // 
-            this._inputEmail.Location = new System.Drawing.Point(87, 181);
+            this._inputEmail.Location = new System.Drawing.Point(98, 226);
+            this._inputEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputEmail.Name = "_inputEmail";
-            this._inputEmail.Size = new System.Drawing.Size(228, 22);
+            this._inputEmail.Size = new System.Drawing.Size(256, 26);
             this._inputEmail.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 184);
+            this.label6.Location = new System.Drawing.Point(17, 230);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 17);
+            this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "Email";
             // 
@@ -239,15 +248,15 @@ namespace Biblioteca.InterfazForm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 19);
+            this.label5.Location = new System.Drawing.Point(16, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(301, 24);
+            this.label5.Size = new System.Drawing.Size(346, 26);
             this.label5.TabIndex = 12;
             this.label5.Text = "Ingrese los datos del nuevo cliente";
             // 
             // FrmClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1613, 830);
             this.Controls.Add(this._dataGridClientes);
@@ -266,6 +275,7 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this._btnAlta);
             this.Controls.Add(this._inputApellido);
             this.Controls.Add(this._inputNombre);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Clientes";

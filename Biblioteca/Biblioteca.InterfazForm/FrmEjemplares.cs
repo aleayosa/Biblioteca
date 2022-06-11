@@ -15,10 +15,12 @@ namespace Biblioteca.InterfazForm
     public partial class FrmEjemplares : Form
     {
         private EjemplarNegocio _ejemplarNegocio;
+        private LibroNegocio _libroNegocio;
         public FrmEjemplares()
         {
             InitializeComponent();
             _ejemplarNegocio = new EjemplarNegocio();
+            _libroNegocio = new LibroNegocio();
         }
 
         private void AltaEjemplar(int libro, string observaciones, int precio)
@@ -34,14 +36,21 @@ namespace Biblioteca.InterfazForm
                 string ejemplares = string.Empty;
 
                 List<Ejemplar> listado = _ejemplarNegocio.GetLista();
-
+                List<Libro> lib = _libroNegocio.GetLista();
+               
                 _dataGridEjemplares.Rows.Clear();
                 foreach (Ejemplar  e in listado)
                 {
                     int n = _dataGridEjemplares.Rows.Add();
-                    _dataGridEjemplares.Rows[n].Cells[0].Value = e.IdLibro;
-                    _dataGridEjemplares.Rows[n].Cells[1].Value = e.Observaciones;
-                    _dataGridEjemplares.Rows[n].Cells[2].Value = e.Precio;
+                    foreach (Libro a in lib)
+                        if (e.IdLibro == a.Id){
+                            _dataGridEjemplares.Rows[n].Cells[0].Value = a.Titulo;
+                        }
+                    
+                    _dataGridEjemplares.Rows[n].Cells[1].Value = e.Id;
+                    _dataGridEjemplares.Rows[n].Cells[2].Value = e.Precio; 
+                    _dataGridEjemplares.Rows[n].Cells[3].Value = e.Observaciones;
+                    
                     
                 }
 
@@ -110,6 +119,19 @@ namespace Biblioteca.InterfazForm
             frm3.Show();
         }
 
+        private void _dataGridEjemplares_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
+
+        private void _inputPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _inputIdLibro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

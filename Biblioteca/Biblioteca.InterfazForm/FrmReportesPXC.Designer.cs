@@ -49,18 +49,20 @@ namespace Biblioteca.InterfazForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 66);
+            this.label1.Location = new System.Drawing.Point(14, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 20);
+            this.label1.Size = new System.Drawing.Size(242, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese el ID del cliente ";
             // 
             // _inputReporteCliente
             // 
-            this._inputReporteCliente.Location = new System.Drawing.Point(16, 89);
+            this._inputReporteCliente.Location = new System.Drawing.Point(18, 111);
+            this._inputReporteCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._inputReporteCliente.Name = "_inputReporteCliente";
-            this._inputReporteCliente.Size = new System.Drawing.Size(186, 22);
+            this._inputReporteCliente.Size = new System.Drawing.Size(209, 26);
             this._inputReporteCliente.TabIndex = 1;
+            this._inputReporteCliente.TextChanged += new System.EventHandler(this._inputReporteCliente_TextChanged);
             // 
             // _dataGridReportePrestamos
             // 
@@ -72,7 +74,8 @@ namespace Biblioteca.InterfazForm
             this.Ejemplar,
             this.FechaAlta,
             this.FechaBaja});
-            this._dataGridReportePrestamos.Location = new System.Drawing.Point(214, 66);
+            this._dataGridReportePrestamos.Location = new System.Drawing.Point(241, 82);
+            this._dataGridReportePrestamos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._dataGridReportePrestamos.Name = "_dataGridReportePrestamos";
             this._dataGridReportePrestamos.RowHeadersWidth = 51;
             this._dataGridReportePrestamos.RowTemplate.Height = 24;
@@ -164,7 +167,7 @@ namespace Biblioteca.InterfazForm
             // 
             // FrmReportesPXC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1620, 771);
             this.Controls.Add(this._btnVolver5);
@@ -174,6 +177,7 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this._dataGridReportePrestamos);
             this.Controls.Add(this._inputReporteCliente);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmReportesPXC";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;

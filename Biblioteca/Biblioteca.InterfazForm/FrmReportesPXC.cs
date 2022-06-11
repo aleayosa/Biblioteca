@@ -85,5 +85,10 @@ namespace Biblioteca.InterfazForm
 
             frm1.Show();
         }
+
+        private void _inputReporteCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

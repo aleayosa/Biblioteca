@@ -121,5 +121,9 @@ namespace Biblioteca.InterfazForm
             frm2.Show();
         }
 
+        private void _dataGridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
