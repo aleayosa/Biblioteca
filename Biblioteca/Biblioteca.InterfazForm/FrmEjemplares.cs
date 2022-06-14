@@ -42,12 +42,12 @@ namespace Biblioteca.InterfazForm
                 foreach (Ejemplar  e in listado)
                 {
                     int n = _dataGridEjemplares.Rows.Add();
+                    
                     foreach (Libro a in lib)
                         if (e.IdLibro == a.Id){
-                            _dataGridEjemplares.Rows[n].Cells[0].Value = a.Titulo;
+                            _dataGridEjemplares.Rows[n].Cells[1].Value = a.Titulo;
                         }
-                    
-                    _dataGridEjemplares.Rows[n].Cells[1].Value = e.Id;
+                    _dataGridEjemplares.Rows[n].Cells[0].Value = e.Id;
                     _dataGridEjemplares.Rows[n].Cells[2].Value = e.Precio; 
                     _dataGridEjemplares.Rows[n].Cells[3].Value = e.Observaciones;
                     

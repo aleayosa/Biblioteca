@@ -86,6 +86,7 @@ namespace Biblioteca.InterfazForm
                                     {
                                         if (c.Id == p.IdCliente)
                                             _dataGridPrestamos.Rows[n].Cells[1].Value = c.Apellido + ", " + c.Nombre;
+
                                     }
                                     _dataGridPrestamos.Rows[n].Cells[2].Value = p.IdEjemplar;
                                     _dataGridPrestamos.Rows[n].Cells[3].Value = listadoLibros[j].Titulo;
