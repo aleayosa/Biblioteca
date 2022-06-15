@@ -24,6 +24,7 @@ namespace Biblioteca.Entidades
         public int Paginas { get => _paginas; set => _paginas = value; }
         public string Tema { get => _tema; set => _tema = value; }
 
+        public string ComboDisplay { get => $"'{this.Titulo}', {this.Autor}"; }
         public override string ToString()
         {
             return this.Id + ") " + this.Titulo + " - " + this.Autor + ". Edición: " + this.Edicion + ". Editorial: " + this.Editorial + ". Páginas: " + this.Paginas+". Tema: "+this.Tema;

@@ -24,32 +24,20 @@ namespace Biblioteca.InterfazForm
             _libroNegocio = new LibroNegocio();
         }
 
-        private void _inputReporteLibro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void _btnExL_Click(object sender, EventArgs e)
         {
             try
             {
                 if (Validar())
                 {
-                    List<Libro> listadoLibros = _libroNegocio.GetLista();
-                    for (var i = 0; i < listadoLibros.Count; i++)
-                    {
-                        if (listadoLibros[i].Id == int.Parse(_inputReporteLibro.Text))
-                        {
-                            _lblNombreLibro.Text = listadoLibros[i].Titulo;
-                        }
-                    }
 
+                    _lblNombreLibro.Text = _cmbLibroE.Text;
                     List<Ejemplar> listadoEjemplar = _ejemplarNegocio.GetLista();
 
                     _dataGridReporteEjemplares.Rows.Clear();
                     foreach (Ejemplar a in listadoEjemplar)
                     {
-                        if (a.IdLibro == int.Parse(_inputReporteLibro.Text))
+                        if (a.IdLibro == int.Parse(_cmbLibroE.SelectedValue.ToString()))
                         {
                             int n = _dataGridReporteEjemplares.Rows.Add();
                             _dataGridReporteEjemplares.Rows[n].Cells[0].Value = a.Id;
@@ -72,7 +60,7 @@ namespace Biblioteca.InterfazForm
 
         private bool Validar()
         {
-            if (string.IsNullOrEmpty(_inputReporteLibro.Text))
+            if (string.IsNullOrEmpty(_cmbLibroE.Text))
                 return false;
 
             return true;
@@ -86,6 +74,22 @@ namespace Biblioteca.InterfazForm
             FrmBiblioteca frm3 = new FrmBiblioteca();
 
             frm3.Show();
+        }
+
+        private void CargarLista()
+        {
+            List<Libro> listadoLibros = _libroNegocio.GetLista();
+
+            _cmbLibroE.DataSource = null;
+            _cmbLibroE.DataSource = listadoLibros;
+            _cmbLibroE.DisplayMember = "ComboDisplay";
+            _cmbLibroE.ValueMember = "Id";
+
+        }
+
+        private void FrmReportesEXL_Load(object sender, EventArgs e)
+        {
+            CargarLista();
         }
     }
 }

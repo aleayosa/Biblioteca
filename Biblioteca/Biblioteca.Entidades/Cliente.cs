@@ -14,6 +14,8 @@ namespace Biblioteca.Entidades
         public int Id { get => _id; set => _id = value; }
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public bool Activo { get => _activo; set => _activo = value; }
+
+        public string ComboDisplay { get => $"{this.Apellido}, {this.Nombre}"; }
     }
 
 

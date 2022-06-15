@@ -34,16 +34,17 @@ namespace Biblioteca.InterfazForm
         {
             int idCliente = 0;
             List<Libro> listadoLibros = _libroNegocio.GetLista(); ;
-            List <Cliente> listadoClientes = _clienteNegocio.GetLista();
+            List<Cliente> listadoClientes = _clienteNegocio.GetLista();
             List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
             for (var i=0; i<listadoClientes.Count; i++)
             {
-                if(listadoClientes[i].Id == int.Parse(_inputReporteCliente.Text))
+                if(listadoClientes[i].Id == int.Parse(_cmbClientesP.SelectedValue.ToString()))
                 {
                     idCliente = i;
                 }
             }
-            _lblNombreCliente.Text = listadoClientes[idCliente].Apellido + ", " + listadoClientes[idCliente].Nombre;
+
+            _lblNombreCliente.Text = _cmbClientesP.Text;
 
             List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
 
@@ -86,9 +87,20 @@ namespace Biblioteca.InterfazForm
             frm1.Show();
         }
 
-        private void _inputReporteCliente_TextChanged(object sender, EventArgs e)
+        private void CargarLista()
         {
+            List<Cliente> listadoClientes = _clienteNegocio.GetLista();
 
+            _cmbClientesP.DataSource = null;
+            _cmbClientesP.DataSource = listadoClientes;
+            _cmbClientesP.DisplayMember = "ComboDisplay";
+            _cmbClientesP.ValueMember = "Id";
+
+        }
+
+        private void FrmReportesPXC_Load(object sender, EventArgs e)
+        {
+            CargarLista();
         }
     }
 }

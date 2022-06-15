@@ -35,7 +35,7 @@ namespace Biblioteca.InterfazForm
             {
                 if (Validar())
                 {
-                    AltaPrestamo(int.Parse(_inputidCliente.Text), int.Parse(_inputIdEjemplar.Text), int.Parse(_inputPlazo.Text));
+                    AltaPrestamo(int.Parse(_cmbClientes.SelectedValue.ToString()), int.Parse(_cmbEjemplares.SelectedValue.ToString()), int.Parse(_inputPlazo.Text));
                     MessageBox.Show("Se ha generado el nuevo préstamo");
                     Limpiar();
                     MostrarPrestamo();
@@ -111,9 +111,9 @@ namespace Biblioteca.InterfazForm
         }
         private bool Validar()
         {
-            if (string.IsNullOrEmpty(_inputidCliente.Text))
+            if (string.IsNullOrEmpty(_cmbClientes.Text))
                 return false;
-            if (string.IsNullOrEmpty(_inputIdEjemplar.Text))
+            if (string.IsNullOrEmpty(_cmbEjemplares.Text))
                 return false;
             if (string.IsNullOrEmpty(_inputPlazo.Text))
                 return false;
@@ -123,9 +123,11 @@ namespace Biblioteca.InterfazForm
 
         private void Limpiar()
         {
-            _inputidCliente.Text = string.Empty;
-            _inputIdEjemplar.Text = string.Empty;
+            _cmbClientes.Text = string.Empty;
+            _cmbEjemplares.Text = string.Empty;
             _inputPlazo.Text = string.Empty;
+            _inputIdFinalizado = string.Empty;
+            _inputIdPrestamoEliminar = string.Empty;
         }
 
         private void _btnVolver3_Click(object sender, EventArgs e)
@@ -139,9 +141,26 @@ namespace Biblioteca.InterfazForm
 
         private void FrmPrestamos_Load(object sender, EventArgs e)
         {
+            CargarLista();
             MostrarPrestamo();
         }
 
+        private void CargarLista()
+        {
+            List<Cliente> listadoClientes = _clienteNegocio.GetLista();
+
+            _cmbClientes.DataSource = null;
+            _cmbClientes.DataSource = listadoClientes;
+            _cmbClientes.DisplayMember = "ComboDisplay";
+            _cmbClientes.ValueMember = "Id";
+
+            List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
+
+            _cmbEjemplares.DataSource = null;
+            _cmbEjemplares.DataSource = listadoEjemplares;
+            _cmbEjemplares.DisplayMember = "Id";
+            _cmbEjemplares.ValueMember = "Id";
+        }
         private void _btnEliminarLibro_Click(object sender, EventArgs e)
         {
             try
