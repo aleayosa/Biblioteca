@@ -18,6 +18,7 @@ namespace Biblioteca.InterfazForm
         private LibroNegocio _libroNegocio;
         private ClienteNegocio _clienteNegocio;
         private EjemplarNegocio _ejemplarNegocio;
+        private Validaciones _validaciones;
         public FrmPrestamos()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Biblioteca.InterfazForm
             _libroNegocio = new LibroNegocio();
             _clienteNegocio = new ClienteNegocio();
             _ejemplarNegocio = new EjemplarNegocio();
+            _validaciones = new Validaciones();
         }
 
 
@@ -33,17 +35,12 @@ namespace Biblioteca.InterfazForm
         {
             try
             {
-                if (Validar())
-                {
-                    AltaPrestamo(int.Parse(_cmbClientes.SelectedValue.ToString()), int.Parse(_cmbEjemplares.SelectedValue.ToString()), int.Parse(_inputPlazo.Text));
-                    MessageBox.Show("Se ha generado el nuevo préstamo");
-                    Limpiar();
-                    MostrarPrestamo();
-                }
-                else
-                {
-                    MessageBox.Show("Hay campos incompletos");
-                }
+                Validar();
+                AltaPrestamo(int.Parse(_cmbClientes.SelectedValue.ToString()), int.Parse(_cmbEjemplares.SelectedValue.ToString()), int.Parse(_inputPlazo.Text));
+                MessageBox.Show("Se ha generado el nuevo préstamo");
+                Limpiar();
+                MostrarPrestamo();
+                CargarLista();
             }
             catch (Exception ex)
             {
@@ -109,16 +106,13 @@ namespace Biblioteca.InterfazForm
                 MessageBox.Show("Error al mostrar los préstamos: " + ex.Message);
             }
         }
-        private bool Validar()
+        private void Validar()
         {
-            if (string.IsNullOrEmpty(_cmbClientes.Text))
-                return false;
-            if (string.IsNullOrEmpty(_cmbEjemplares.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputPlazo.Text))
-                return false;
-
-            return true;
+            if (!_validaciones.ValidarNull(_cmbClientes.Text))
+                throw new Exception("El campo " + _lblClienteP.Text + " no puede estar vacío");
+            if (!_validaciones.ValidarNull(_cmbEjemplares.Text))
+                throw new Exception("El campo " + _lblEjemplarP.Text + " no puede estar vacío");
+            _inputPlazo.Text = _validaciones.ValidarInt(_inputPlazo.Text, _lblPlazo.Text, 1, 365).ToString();
         }
 
         private void Limpiar()
@@ -126,8 +120,8 @@ namespace Biblioteca.InterfazForm
             _cmbClientes.Text = string.Empty;
             _cmbEjemplares.Text = string.Empty;
             _inputPlazo.Text = string.Empty;
-            _inputIdFinalizado = string.Empty;
-            _inputIdPrestamoEliminar = string.Empty;
+            _cmbIdEliminar.Text = string.Empty;
+            _cmbIdFinalizar.Text = string.Empty;
         }
 
         private void _btnVolver3_Click(object sender, EventArgs e)
@@ -160,22 +154,40 @@ namespace Biblioteca.InterfazForm
             _cmbEjemplares.DataSource = listadoEjemplares;
             _cmbEjemplares.DisplayMember = "Id";
             _cmbEjemplares.ValueMember = "Id";
+
+            List<Prestamo> listadoPrestamos = _prestamoNegocio.GetLista();
+
+            _cmbIdEliminar.DataSource = null;
+            _cmbIdEliminar.DataSource = listadoPrestamos;
+            _cmbIdEliminar.DisplayMember = "Id";
+            _cmbIdEliminar.ValueMember = "Id";
+
+            List<Prestamo> listadoPrestamos2 = _prestamoNegocio.GetLista();
+            _cmbIdFinalizar.DataSource = null;
+            _cmbIdFinalizar.DataSource = listadoPrestamos2;
+            _cmbIdFinalizar.DisplayMember = "Id";
+            _cmbIdFinalizar.ValueMember = "Id";
+
+            Limpiar();
         }
         private void _btnEliminarLibro_Click(object sender, EventArgs e)
         {
             try
             {
+                if (!_validaciones.ValidarNull(_cmbIdEliminar.Text))
+                    throw new Exception("El campo ID no puede estar vacío");
                 List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
 
                 foreach (Prestamo p in listadoPrestamo)
                 {
-                    if (p.Id == int.Parse(_inputIdPrestamoEliminar.Text))
+                    if (p.Id == int.Parse(_cmbIdEliminar.SelectedValue.ToString()))
                     {
                         _prestamoNegocio.Eliminar(p);
                     }
                 }
 
                 MostrarPrestamo();
+                CargarLista();
             }
             catch (Exception ex)
             {
@@ -189,25 +201,32 @@ namespace Biblioteca.InterfazForm
         {
             try
             {
+                if (!_validaciones.ValidarNull(_cmbIdFinalizar.Text))
+                    throw new Exception("El campo ID no puede estar vacío");
                 List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
 
                 foreach (Prestamo p in listadoPrestamo)
                 {
-                    if (p.Id == int.Parse(_inputIdFinalizado.Text))
+                    if (p.Id == int.Parse(_cmbIdFinalizar.SelectedValue.ToString()))
                     {
                         Prestamo p2 = new Prestamo();
                         p2 = p;
+                        if(p2.FechaDevolucionReal != Convert.ToDateTime("1/1/0001"))
+                        {
+                            throw new Exception("El préstamo seleccionado ya fue finalizado con fecha: "+p2.FechaDevolucionReal+".");
+                        }
                         p2.FechaDevolucionReal = DateTime.Now;
                         _prestamoNegocio.Modificar(p2);
                     }
                 }
 
                 MostrarPrestamo();
+                CargarLista();
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error al eliminar el préstamo: " + ex.Message);
+                MessageBox.Show("Error al finalizar el préstamo: " + ex.Message);
             }
         }
     }

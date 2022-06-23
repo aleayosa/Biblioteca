@@ -18,6 +18,7 @@ namespace Biblioteca.InterfazForm
         private LibroNegocio _libroNegocio;
         private ClienteNegocio _clienteNegocio;
         private EjemplarNegocio _ejemplarNegocio;
+        private Validaciones _validaciones;
 
         public FrmReportesPXC()
         {
@@ -27,54 +28,66 @@ namespace Biblioteca.InterfazForm
             _libroNegocio = new LibroNegocio();
             _clienteNegocio = new ClienteNegocio();
             _ejemplarNegocio = new EjemplarNegocio();
-
+            _validaciones = new Validaciones();
         }
 
         private void _btnPxC_Click(object sender, EventArgs e)
         {
-            int idCliente = 0;
-            List<Libro> listadoLibros = _libroNegocio.GetLista(); ;
-            List<Cliente> listadoClientes = _clienteNegocio.GetLista();
-            List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
-            for (var i=0; i<listadoClientes.Count; i++)
+            try
             {
-                if(listadoClientes[i].Id == int.Parse(_cmbClientesP.SelectedValue.ToString()))
+                if (!_validaciones.ValidarNull(_cmbClientesP.Text))
+                    throw new Exception("El campo ID no puede estar vacío");
+
+                int idCliente = 0;
+                List<Libro> listadoLibros = _libroNegocio.GetLista(); ;
+                List<Cliente> listadoClientes = _clienteNegocio.GetLista();
+                List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
+                for (var i = 0; i < listadoClientes.Count; i++)
                 {
-                    idCliente = i;
+                    if (listadoClientes[i].Id == int.Parse(_cmbClientesP.SelectedValue.ToString()))
+                    {
+                        idCliente = i;
+                    }
+                }
+
+                _lblNombreCliente.Text = _cmbClientesP.Text;
+
+                List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
+
+                _dataGridReportePrestamos.Rows.Clear();
+                foreach (Prestamo p in listadoPrestamo)
+                {
+                    if (p.IdCliente == listadoClientes[idCliente].Id)
+                    {
+
+                        for (var i = 0; i < listadoEjemplares.Count; i++)
+                        {
+                            if (listadoEjemplares[i].Id == p.IdEjemplar)
+                            {
+                                for (var j = 0; j < listadoLibros.Count; j++)
+                                {
+                                    if (listadoLibros[j].Id == listadoEjemplares[i].IdLibro)
+                                    {
+                                        int n = _dataGridReportePrestamos.Rows.Add();
+                                        _dataGridReportePrestamos.Rows[n].Cells[0].Value = p.Id;
+                                        _dataGridReportePrestamos.Rows[n].Cells[1].Value = listadoLibros[j].Titulo;
+                                        _dataGridReportePrestamos.Rows[n].Cells[2].Value = listadoLibros[j].Autor;
+                                        _dataGridReportePrestamos.Rows[n].Cells[3].Value = p.IdEjemplar;
+                                        _dataGridReportePrestamos.Rows[n].Cells[4].Value = p.FechaPrestamo;
+                                        _dataGridReportePrestamos.Rows[n].Cells[5].Value = p.FechaDevolucionTentativa;
+
+                                        _cmbClientesP.Text = string.Empty;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
-
-            _lblNombreCliente.Text = _cmbClientesP.Text;
-
-            List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
-
-            _dataGridReportePrestamos.Rows.Clear();
-            foreach (Prestamo p in listadoPrestamo)
+            catch (Exception ex)
             {
-                if (p.IdCliente == listadoClientes[idCliente].Id)
-                {
-
-                    for (var i = 0; i < listadoEjemplares.Count; i++)
-                    {
-                        if (listadoEjemplares[i].Id == p.IdEjemplar)
-                        {
-                            for (var j = 0; j < listadoLibros.Count; j++)
-                            {
-                                if (listadoLibros[j].Id == listadoEjemplares[i].IdLibro)
-                                {
-                                    int n = _dataGridReportePrestamos.Rows.Add();
-                                    _dataGridReportePrestamos.Rows[n].Cells[0].Value = p.Id;
-                                    _dataGridReportePrestamos.Rows[n].Cells[1].Value = listadoLibros[j].Titulo;
-                                    _dataGridReportePrestamos.Rows[n].Cells[2].Value = listadoLibros[j].Autor;
-                                    _dataGridReportePrestamos.Rows[n].Cells[3].Value = p.IdEjemplar;
-                                    _dataGridReportePrestamos.Rows[n].Cells[4].Value = p.FechaPrestamo;
-                                    _dataGridReportePrestamos.Rows[n].Cells[5].Value = p.FechaDevolucionTentativa;
-                                }
-                            }    
-                        }
-                    }                    
-                }              
-
+                MessageBox.Show("Error al buscar el cliente: " + ex.Message);
             }
         }
 
@@ -96,6 +109,7 @@ namespace Biblioteca.InterfazForm
             _cmbClientesP.DisplayMember = "ComboDisplay";
             _cmbClientesP.ValueMember = "Id";
 
+            _cmbClientesP.Text = string.Empty;
         }
 
         private void FrmReportesPXC_Load(object sender, EventArgs e)

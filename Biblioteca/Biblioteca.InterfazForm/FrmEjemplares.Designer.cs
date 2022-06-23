@@ -52,19 +52,18 @@ namespace Biblioteca.InterfazForm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 18);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(12, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(252, 18);
+            this.label5.Size = new System.Drawing.Size(324, 24);
             this.label5.TabIndex = 24;
             this.label5.Text = "Ingrese los datos del nuevo ejemplar:";
             // 
             // _btnAlta
             // 
-            this._btnAlta.Location = new System.Drawing.Point(170, 140);
-            this._btnAlta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnAlta.Location = new System.Drawing.Point(227, 172);
+            this._btnAlta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnAlta.Name = "_btnAlta";
-            this._btnAlta.Size = new System.Drawing.Size(84, 19);
+            this._btnAlta.Size = new System.Drawing.Size(112, 23);
             this._btnAlta.TabIndex = 15;
             this._btnAlta.Text = "Crear";
             this._btnAlta.UseVisualStyleBackColor = true;
@@ -75,19 +74,18 @@ namespace Biblioteca.InterfazForm
             this._lblListaEjemplares.AutoSize = true;
             this._lblListaEjemplares.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblListaEjemplares.ForeColor = System.Drawing.Color.Red;
-            this._lblListaEjemplares.Location = new System.Drawing.Point(254, 55);
-            this._lblListaEjemplares.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this._lblListaEjemplares.Location = new System.Drawing.Point(339, 68);
             this._lblListaEjemplares.Name = "_lblListaEjemplares";
-            this._lblListaEjemplares.Size = new System.Drawing.Size(0, 18);
+            this._lblListaEjemplares.Size = new System.Drawing.Size(0, 23);
             this._lblListaEjemplares.TabIndex = 27;
             // 
             // _btnAtras
             // 
             this._btnAtras.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnAtras.Location = new System.Drawing.Point(989, 11);
-            this._btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnAtras.Location = new System.Drawing.Point(1699, 16);
+            this._btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnAtras.Name = "_btnAtras";
-            this._btnAtras.Size = new System.Drawing.Size(89, 24);
+            this._btnAtras.Size = new System.Drawing.Size(119, 30);
             this._btnAtras.TabIndex = 30;
             this._btnAtras.Text = "Volver";
             this._btnAtras.UseVisualStyleBackColor = false;
@@ -101,14 +99,13 @@ namespace Biblioteca.InterfazForm
             this.Titulo,
             this.Precio,
             this.id});
-            this._dataGridEjemplares.Location = new System.Drawing.Point(306, 54);
-            this._dataGridEjemplares.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._dataGridEjemplares.Location = new System.Drawing.Point(401, 64);
+            this._dataGridEjemplares.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._dataGridEjemplares.Name = "_dataGridEjemplares";
             this._dataGridEjemplares.RowHeadersWidth = 51;
             this._dataGridEjemplares.RowTemplate.Height = 24;
-            this._dataGridEjemplares.Size = new System.Drawing.Size(800, 444);
+            this._dataGridEjemplares.Size = new System.Drawing.Size(1417, 678);
             this._dataGridEjemplares.TabIndex = 31;
-            
             // 
             // Observaciones
             // 
@@ -142,75 +139,71 @@ namespace Biblioteca.InterfazForm
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(298, 16);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(397, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 19);
+            this.label7.Size = new System.Drawing.Size(193, 24);
             this.label7.TabIndex = 28;
             this.label7.Text = "Listado de Ejemplares";
             // 
             // _inputObservaciones
             // 
-            this._inputObservaciones.Location = new System.Drawing.Point(123, 81);
-            this._inputObservaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._inputObservaciones.Location = new System.Drawing.Point(164, 100);
+            this._inputObservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._inputObservaciones.Name = "_inputObservaciones";
-            this._inputObservaciones.Size = new System.Drawing.Size(132, 20);
+            this._inputObservaciones.Size = new System.Drawing.Size(175, 22);
             this._inputObservaciones.TabIndex = 34;
             // 
             // _lblLibro
             // 
             this._lblLibro.AutoSize = true;
-            this._lblLibro.Location = new System.Drawing.Point(10, 56);
-            this._lblLibro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this._lblLibro.Location = new System.Drawing.Point(13, 69);
             this._lblLibro.Name = "_lblLibro";
-            this._lblLibro.Size = new System.Drawing.Size(30, 13);
+            this._lblLibro.Size = new System.Drawing.Size(40, 17);
             this._lblLibro.TabIndex = 16;
             this._lblLibro.Text = "Libro";
             // 
             // _lblObservaciones
             // 
             this._lblObservaciones.AutoSize = true;
-            this._lblObservaciones.Location = new System.Drawing.Point(10, 81);
-            this._lblObservaciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this._lblObservaciones.Location = new System.Drawing.Point(13, 100);
             this._lblObservaciones.Name = "_lblObservaciones";
-            this._lblObservaciones.Size = new System.Drawing.Size(78, 13);
+            this._lblObservaciones.Size = new System.Drawing.Size(103, 17);
             this._lblObservaciones.TabIndex = 17;
             this._lblObservaciones.Text = "Observaciones";
             // 
             // _lblPrecio
             // 
             this._lblPrecio.AutoSize = true;
-            this._lblPrecio.Location = new System.Drawing.Point(10, 112);
-            this._lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this._lblPrecio.Location = new System.Drawing.Point(13, 138);
             this._lblPrecio.Name = "_lblPrecio";
-            this._lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this._lblPrecio.Size = new System.Drawing.Size(48, 17);
             this._lblPrecio.TabIndex = 20;
             this._lblPrecio.Text = "Precio";
             // 
             // _inputPrecio
             // 
-            this._inputPrecio.Location = new System.Drawing.Point(123, 108);
-            this._inputPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._inputPrecio.Location = new System.Drawing.Point(164, 133);
+            this._inputPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._inputPrecio.Name = "_inputPrecio";
-            this._inputPrecio.Size = new System.Drawing.Size(132, 20);
+            this._inputPrecio.Size = new System.Drawing.Size(175, 22);
             this._inputPrecio.TabIndex = 35;
-            
             // 
             // _cmbLibros
             // 
+            this._cmbLibros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbLibros.FormattingEnabled = true;
-            this._cmbLibros.Location = new System.Drawing.Point(83, 52);
-            this._cmbLibros.Margin = new System.Windows.Forms.Padding(2);
+            this._cmbLibros.Location = new System.Drawing.Point(111, 64);
+            this._cmbLibros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._cmbLibros.Name = "_cmbLibros";
-            this._cmbLibros.Size = new System.Drawing.Size(172, 21);
+            this._cmbLibros.Size = new System.Drawing.Size(228, 24);
             this._cmbLibros.TabIndex = 45;
             // 
             // FrmEjemplares
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1090, 506);
+            this.ClientSize = new System.Drawing.Size(1856, 763);
             this.Controls.Add(this._cmbLibros);
             this.Controls.Add(this._inputPrecio);
             this.Controls.Add(this._inputObservaciones);
@@ -223,9 +216,9 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this._lblObservaciones);
             this.Controls.Add(this._lblLibro);
             this.Controls.Add(this._btnAlta);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmEjemplares";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Ejemplares";
             this.Load += new System.EventHandler(this.FrmEjemplares_Load);
             ((System.ComponentModel.ISupportInitialize)(this._dataGridEjemplares)).EndInit();

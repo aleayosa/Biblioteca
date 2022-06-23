@@ -15,11 +15,13 @@ namespace Biblioteca.InterfazForm
     public partial class FrmClientes : Form
     {
         private ClienteNegocio _clienteNegocio;
+        private Validaciones _validaciones;
         public FrmClientes()
         {
             InitializeComponent();
 
             _clienteNegocio = new ClienteNegocio();
+            _validaciones = new Validaciones();
         }
 
         private void AltaCliente(string nombre, string apellido, string direccion, string telefono, string email)
@@ -58,39 +60,27 @@ namespace Biblioteca.InterfazForm
         {
             try
             {
-                if (Validar())
-                {
-                    AltaCliente(_inputNombre.Text, _inputApellido.Text, _inputDireccion.Text, _inputTelefono.Text, _inputEmail.Text);
-                    MessageBox.Show("Se ha generado el nuevo cliente");
-                    Limpiar();
-                    MostrarCliente();
-                }
-                else
-                {
-                    MessageBox.Show("Hay campos incompletos");
-                }
+                Validar();
+                AltaCliente(_inputNombre.Text, _inputApellido.Text, _inputDireccion.Text, _inputTelefono.Text, _inputEmail.Text);
+                MessageBox.Show("Se ha generado el nuevo cliente");
+                Limpiar();
+                MostrarCliente();
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al dar alta al cliente " + ex.Message);
+                MessageBox.Show("Error al dar alta al cliente: " + ex.Message);
             }
 
         }
 
-        private bool Validar()
+        private void Validar()
         {
-            if (string.IsNullOrEmpty(_inputNombre.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputApellido.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputDireccion.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputEmail.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputTelefono.Text))
-                return false;
-
-            return true;
+            _inputNombre.Text = _validaciones.ValidarString(_inputNombre.Text, _lblNombre.Text);
+            _inputApellido.Text = _validaciones.ValidarString(_inputApellido.Text, _lblApellido.Text);
+            _inputEmail.Text = _validaciones.ValidarString(_inputEmail.Text, _lblEmail.Text); 
+            _inputDireccion.Text = _validaciones.ValidarString(_inputDireccion.Text, _lblDireccion.Text);
+            _inputTelefono.Text = _validaciones.ValidarLong(_inputTelefono.Text, _lblTelefono.Text, 100000, 999999999999999).ToString();
         }
 
         private void _btnMostrar_Click(object sender, EventArgs e)
@@ -119,11 +109,6 @@ namespace Biblioteca.InterfazForm
             FrmBiblioteca frm2 = new FrmBiblioteca();
 
             frm2.Show();
-        }
-
-        private void _dataGridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

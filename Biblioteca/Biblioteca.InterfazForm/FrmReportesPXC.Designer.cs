@@ -31,17 +31,17 @@ namespace Biblioteca.InterfazForm
         {
             this.label1 = new System.Windows.Forms.Label();
             this._dataGridReportePrestamos = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this._lblNombreCliente = new System.Windows.Forms.Label();
+            this._btnPxC = new System.Windows.Forms.Button();
+            this._btnVolver5 = new System.Windows.Forms.Button();
+            this._cmbClientesP = new System.Windows.Forms.ComboBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ejemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this._lblNombreCliente = new System.Windows.Forms.Label();
-            this._btnPxC = new System.Windows.Forms.Button();
-            this._btnVolver5 = new System.Windows.Forms.Button();
-            this._cmbClientesP = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridReportePrestamos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,10 +49,9 @@ namespace Biblioteca.InterfazForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 17);
+            this.label1.Size = new System.Drawing.Size(190, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese el ID del cliente ";
             // 
@@ -66,20 +65,74 @@ namespace Biblioteca.InterfazForm
             this.Ejemplar,
             this.FechaAlta,
             this.FechaBaja});
-            this._dataGridReportePrestamos.Location = new System.Drawing.Point(160, 54);
-            this._dataGridReportePrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._dataGridReportePrestamos.Location = new System.Drawing.Point(213, 66);
+            this._dataGridReportePrestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._dataGridReportePrestamos.Name = "_dataGridReportePrestamos";
             this._dataGridReportePrestamos.RowHeadersWidth = 51;
             this._dataGridReportePrestamos.RowTemplate.Height = 24;
-            this._dataGridReportePrestamos.Size = new System.Drawing.Size(1046, 554);
+            this._dataGridReportePrestamos.Size = new System.Drawing.Size(1568, 682);
             this._dataGridReportePrestamos.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(209, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Préstamos del cliente:";
+            // 
+            // _lblNombreCliente
+            // 
+            this._lblNombreCliente.AutoSize = true;
+            this._lblNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblNombreCliente.ForeColor = System.Drawing.Color.Blue;
+            this._lblNombreCliente.Location = new System.Drawing.Point(455, 21);
+            this._lblNombreCliente.Name = "_lblNombreCliente";
+            this._lblNombreCliente.Size = new System.Drawing.Size(0, 25);
+            this._lblNombreCliente.TabIndex = 4;
+            // 
+            // _btnPxC
+            // 
+            this._btnPxC.Location = new System.Drawing.Point(127, 116);
+            this._btnPxC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._btnPxC.Name = "_btnPxC";
+            this._btnPxC.Size = new System.Drawing.Size(75, 26);
+            this._btnPxC.TabIndex = 5;
+            this._btnPxC.Text = "Buscar";
+            this._btnPxC.UseVisualStyleBackColor = true;
+            this._btnPxC.Click += new System.EventHandler(this._btnPxC_Click);
+            // 
+            // _btnVolver5
+            // 
+            this._btnVolver5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this._btnVolver5.Location = new System.Drawing.Point(1674, 25);
+            this._btnVolver5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._btnVolver5.Name = "_btnVolver5";
+            this._btnVolver5.Size = new System.Drawing.Size(107, 23);
+            this._btnVolver5.TabIndex = 18;
+            this._btnVolver5.Text = "Volver";
+            this._btnVolver5.UseVisualStyleBackColor = false;
+            this._btnVolver5.Click += new System.EventHandler(this._btnVolver5_Click);
+            // 
+            // _cmbClientesP
+            // 
+            this._cmbClientesP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cmbClientesP.FormattingEnabled = true;
+            this._cmbClientesP.Location = new System.Drawing.Point(15, 90);
+            this._cmbClientesP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this._cmbClientesP.Name = "_cmbClientesP";
+            this._cmbClientesP.Size = new System.Drawing.Size(185, 24);
+            this._cmbClientesP.TabIndex = 45;
             // 
             // Id
             // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Id.HeaderText = "ID";
             this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
-            this.Id.Width = 125;
+            this.Id.Width = 50;
             // 
             // Titulo
             // 
@@ -97,10 +150,11 @@ namespace Biblioteca.InterfazForm
             // 
             // Ejemplar
             // 
+            this.Ejemplar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Ejemplar.HeaderText = "Ejemplar";
             this.Ejemplar.MinimumWidth = 6;
             this.Ejemplar.Name = "Ejemplar";
-            this.Ejemplar.Width = 125;
+            this.Ejemplar.Width = 92;
             // 
             // FechaAlta
             // 
@@ -116,65 +170,11 @@ namespace Biblioteca.InterfazForm
             this.FechaBaja.Name = "FechaBaja";
             this.FechaBaja.Width = 125;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(157, 17);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Préstamos del cliente:";
-            // 
-            // _lblNombreCliente
-            // 
-            this._lblNombreCliente.AutoSize = true;
-            this._lblNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblNombreCliente.ForeColor = System.Drawing.Color.Blue;
-            this._lblNombreCliente.Location = new System.Drawing.Point(341, 17);
-            this._lblNombreCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this._lblNombreCliente.Name = "_lblNombreCliente";
-            this._lblNombreCliente.Size = new System.Drawing.Size(0, 20);
-            this._lblNombreCliente.TabIndex = 4;
-            // 
-            // _btnPxC
-            // 
-            this._btnPxC.Location = new System.Drawing.Point(95, 94);
-            this._btnPxC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this._btnPxC.Name = "_btnPxC";
-            this._btnPxC.Size = new System.Drawing.Size(56, 21);
-            this._btnPxC.TabIndex = 5;
-            this._btnPxC.Text = "Buscar";
-            this._btnPxC.UseVisualStyleBackColor = true;
-            this._btnPxC.Click += new System.EventHandler(this._btnPxC_Click);
-            // 
-            // _btnVolver5
-            // 
-            this._btnVolver5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnVolver5.Location = new System.Drawing.Point(1127, 17);
-            this._btnVolver5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this._btnVolver5.Name = "_btnVolver5";
-            this._btnVolver5.Size = new System.Drawing.Size(80, 19);
-            this._btnVolver5.TabIndex = 18;
-            this._btnVolver5.Text = "Volver";
-            this._btnVolver5.UseVisualStyleBackColor = false;
-            this._btnVolver5.Click += new System.EventHandler(this._btnVolver5_Click);
-            // 
-            // _cmbClientesP
-            // 
-            this._cmbClientesP.FormattingEnabled = true;
-            this._cmbClientesP.Location = new System.Drawing.Point(11, 73);
-            this._cmbClientesP.Margin = new System.Windows.Forms.Padding(2);
-            this._cmbClientesP.Name = "_cmbClientesP";
-            this._cmbClientesP.Size = new System.Drawing.Size(140, 21);
-            this._cmbClientesP.TabIndex = 45;
-            // 
             // FrmReportesPXC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 638);
+            this.ClientSize = new System.Drawing.Size(1812, 794);
             this.Controls.Add(this._cmbClientesP);
             this.Controls.Add(this._btnVolver5);
             this.Controls.Add(this._btnPxC);
@@ -182,10 +182,10 @@ namespace Biblioteca.InterfazForm
             this.Controls.Add(this.label2);
             this.Controls.Add(this._dataGridReportePrestamos);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmReportesPXC";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Préstamos Por Cliente";
             this.Load += new System.EventHandler(this.FrmReportesPXC_Load);
             ((System.ComponentModel.ISupportInitialize)(this._dataGridReportePrestamos)).EndInit();
@@ -202,12 +202,12 @@ namespace Biblioteca.InterfazForm
         private System.Windows.Forms.Label _lblNombreCliente;
         private System.Windows.Forms.Button _btnPxC;
         private System.Windows.Forms.Button _btnVolver5;
+        private System.Windows.Forms.ComboBox _cmbClientesP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ejemplar;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaBaja;
-        private System.Windows.Forms.ComboBox _cmbClientesP;
     }
 }

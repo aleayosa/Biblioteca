@@ -44,6 +44,8 @@ namespace Biblioteca.InterfazForm
                             _dataGridReporteEjemplares.Rows[n].Cells[1].Value = a.FechaAlta;
                             _dataGridReporteEjemplares.Rows[n].Cells[2].Value = a.Precio;
                             _dataGridReporteEjemplares.Rows[n].Cells[3].Value = a.Observaciones;
+
+                            _cmbLibroE.Text = string.Empty;
                         }
                     }
                 }
@@ -85,6 +87,7 @@ namespace Biblioteca.InterfazForm
             _cmbLibroE.DisplayMember = "ComboDisplay";
             _cmbLibroE.ValueMember = "Id";
 
+            _cmbLibroE.Text = string.Empty;
         }
 
         private void FrmReportesEXL_Load(object sender, EventArgs e)

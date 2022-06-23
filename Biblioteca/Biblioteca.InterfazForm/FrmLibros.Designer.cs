@@ -47,6 +47,7 @@ namespace Biblioteca.InterfazForm
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._btnAtras = new System.Windows.Forms.Button();
             this._dataGridLibros = new System.Windows.Forms.DataGridView();
+            this._inputTitulo = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +55,6 @@ namespace Biblioteca.InterfazForm
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paginas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._inputTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridLibros)).BeginInit();
             this.SuspendLayout();
@@ -206,7 +206,7 @@ namespace Biblioteca.InterfazForm
             // _btnAtras
             // 
             this._btnAtras.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnAtras.Location = new System.Drawing.Point(1462, 22);
+            this._btnAtras.Location = new System.Drawing.Point(1681, 21);
             this._btnAtras.Name = "_btnAtras";
             this._btnAtras.Size = new System.Drawing.Size(119, 29);
             this._btnAtras.TabIndex = 30;
@@ -229,15 +229,25 @@ namespace Biblioteca.InterfazForm
             this._dataGridLibros.Name = "_dataGridLibros";
             this._dataGridLibros.RowHeadersWidth = 51;
             this._dataGridLibros.RowTemplate.Height = 24;
-            this._dataGridLibros.Size = new System.Drawing.Size(1238, 678);
+            this._dataGridLibros.Size = new System.Drawing.Size(1457, 678);
             this._dataGridLibros.TabIndex = 31;
+            // 
+            // _inputTitulo
+            // 
+            this._inputTitulo.AutoSize = true;
+            this._inputTitulo.Location = new System.Drawing.Point(12, 57);
+            this._inputTitulo.Name = "_inputTitulo";
+            this._inputTitulo.Size = new System.Drawing.Size(43, 17);
+            this._inputTitulo.TabIndex = 16;
+            this._inputTitulo.Text = "Título";
             // 
             // id
             // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.id.HeaderText = "ID";
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
-            this.id.Width = 125;
+            this.id.Width = 50;
             // 
             // Titulo
             // 
@@ -255,10 +265,11 @@ namespace Biblioteca.InterfazForm
             // 
             // Edicion
             // 
+            this.Edicion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Edicion.HeaderText = "Edición";
             this.Edicion.MinimumWidth = 6;
             this.Edicion.Name = "Edicion";
-            this.Edicion.Width = 125;
+            this.Edicion.Width = 83;
             // 
             // Editorial
             // 
@@ -269,10 +280,11 @@ namespace Biblioteca.InterfazForm
             // 
             // Paginas
             // 
+            this.Paginas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Paginas.HeaderText = "Páginas";
             this.Paginas.MinimumWidth = 6;
             this.Paginas.Name = "Paginas";
-            this.Paginas.Width = 125;
+            this.Paginas.Width = 88;
             // 
             // Tema
             // 
@@ -281,21 +293,12 @@ namespace Biblioteca.InterfazForm
             this.Tema.Name = "Tema";
             this.Tema.Width = 125;
             // 
-            // _inputTitulo
-            // 
-            this._inputTitulo.AutoSize = true;
-            this._inputTitulo.Location = new System.Drawing.Point(12, 57);
-            this._inputTitulo.Name = "_inputTitulo";
-            this._inputTitulo.Size = new System.Drawing.Size(43, 17);
-            this._inputTitulo.TabIndex = 16;
-            this._inputTitulo.Text = "Título";
-            // 
             // FrmLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1607, 775);
+            this.ClientSize = new System.Drawing.Size(1812, 794);
             this.Controls.Add(this._dataGridLibros);
             this.Controls.Add(this._btnAtras);
             this.Controls.Add(this.pictureBox1);
@@ -318,7 +321,7 @@ namespace Biblioteca.InterfazForm
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmLibros";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Libros";
             this.Load += new System.EventHandler(this.FrmLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -16,11 +16,14 @@ namespace Biblioteca.InterfazForm
     {
         private EjemplarNegocio _ejemplarNegocio;
         private LibroNegocio _libroNegocio;
+        private Validaciones _validaciones;
+
         public FrmEjemplares()
         {
             InitializeComponent();
             _ejemplarNegocio = new EjemplarNegocio();
             _libroNegocio = new LibroNegocio();
+            _validaciones = new Validaciones();
         }
 
         private void AltaEjemplar(int libro, string observaciones, int precio)
@@ -37,24 +40,25 @@ namespace Biblioteca.InterfazForm
 
                 List<Ejemplar> listado = _ejemplarNegocio.GetLista();
                 List<Libro> lib = _libroNegocio.GetLista();
-               
+
                 _dataGridEjemplares.Rows.Clear();
-                foreach (Ejemplar  e in listado)
+                foreach (Ejemplar e in listado)
                 {
                     int n = _dataGridEjemplares.Rows.Add();
-                    
+
                     foreach (Libro a in lib)
-                        if (e.IdLibro == a.Id){
+                        if (e.IdLibro == a.Id)
+                        {
                             _dataGridEjemplares.Rows[n].Cells[1].Value = a.Titulo;
                         }
                     _dataGridEjemplares.Rows[n].Cells[0].Value = e.Id;
-                    _dataGridEjemplares.Rows[n].Cells[2].Value = e.Precio; 
+                    _dataGridEjemplares.Rows[n].Cells[2].Value = e.Precio;
                     _dataGridEjemplares.Rows[n].Cells[3].Value = e.Observaciones;
-                    
-                    
+
+
                 }
 
-                
+
             }
             catch (Exception ex)
             {
@@ -67,34 +71,24 @@ namespace Biblioteca.InterfazForm
         {
             try
             {
-                if (Validar())
-                {
-                    AltaEjemplar(int.Parse(_cmbLibros.SelectedValue.ToString()), _inputObservaciones.Text, int.Parse(_inputPrecio.Text)); ;
-                    MessageBox.Show("Se ha generado el nuevo ejemplar");
-                    Limpiar();
-                    MostrarEjemplares();
-                }
-                else
-                {
-                    MessageBox.Show("Hay campos incompletos");
-                }
+                Validar();
+                AltaEjemplar(int.Parse(_cmbLibros.SelectedValue.ToString()), _inputObservaciones.Text, int.Parse(_inputPrecio.Text)); ;
+                MessageBox.Show("Se ha generado el nuevo ejemplar");
+                Limpiar();
+                MostrarEjemplares();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al dar alta el ejemplar " + ex.Message);
+                MessageBox.Show("Error al dar alta el ejemplar: " + ex.Message);
             }
         }
 
-        private bool Validar()
+        private void Validar()
         {
-            if (string.IsNullOrEmpty(_cmbLibros.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputObservaciones.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputPrecio.Text))
-                return false;
-   
-            return true;
+            if (!_validaciones.ValidarNull(_cmbLibros.Text))
+                throw new Exception("El campo " + _lblLibro.Text + " no puede estar vacío");              
+            _inputObservaciones.Text = _validaciones.ValidarString(_inputObservaciones.Text, _lblObservaciones.Text);
+            _inputPrecio.Text = _validaciones.ValidarDouble(_inputPrecio.Text, _lblPrecio.Text, 1, 99999999999.99).ToString();
         }
 
         private void Limpiar()
@@ -102,7 +96,7 @@ namespace Biblioteca.InterfazForm
             _cmbLibros.Text = string.Empty;
             _inputObservaciones.Text = string.Empty;
             _inputPrecio.Text = string.Empty;
-            
+
         }
 
         private void FrmEjemplares_Load(object sender, EventArgs e)
@@ -129,6 +123,7 @@ namespace Biblioteca.InterfazForm
             _cmbLibros.DisplayMember = "ComboDisplay";
             _cmbLibros.ValueMember = "Id";
 
+            Limpiar();
 
         }
     }

@@ -15,10 +15,12 @@ namespace Biblioteca.InterfazForm
     public partial class FrmLibros : Form
     {
         private LibroNegocio _libroNegocio;
+        private Validaciones _validaciones;
         public FrmLibros()
         {
             InitializeComponent();
             _libroNegocio = new LibroNegocio();
+            _validaciones = new Validaciones();
         }
 
         private void AltaLibro(string titulo, string autor, int edicion, string editorial, int paginas, string tema)
@@ -48,7 +50,7 @@ namespace Biblioteca.InterfazForm
                     _dataGridLibros.Rows[n].Cells[6].Value = l.Tema;
                 }
 
-                
+
             }
             catch (Exception ex)
             {
@@ -61,40 +63,28 @@ namespace Biblioteca.InterfazForm
         {
             try
             {
-                if (Validar())
-                {
-                    AltaLibro(_inputTitulo1.Text, _inputAutor1.Text, int.Parse(_inputEdicion1.Text), _inputEditorial1.Text, int.Parse(_inputPaginas1.Text), _inputTemas1.Text);
-                    MessageBox.Show("Se ha generado el nuevo libro");
-                    Limpiar();
-                    MostrarLibros();
-                }
-                else
-                {
-                    MessageBox.Show("Hay campos incompletos");
-                }
+                Validar();
+                AltaLibro(_inputTitulo1.Text, _inputAutor1.Text, int.Parse(_inputEdicion1.Text), _inputEditorial1.Text, int.Parse(_inputPaginas1.Text), _inputTemas1.Text);
+                MessageBox.Show("Se ha generado el nuevo libro");
+                Limpiar();
+                MostrarLibros();
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al dar alta el libro " + ex.Message);
+                MessageBox.Show("Error al dar alta el libro: " + ex.Message);
             }
         }
 
-        private bool Validar()
+        private void Validar()
         {
-            if (string.IsNullOrEmpty(_inputTitulo1.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputAutor1.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputEdicion1.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputEditorial1.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputPaginas1.Text))
-                return false;
-            if (string.IsNullOrEmpty(_inputTemas1.Text))
-                return false;
+            _inputTitulo1.Text = _validaciones.ValidarString(_inputTitulo1.Text, _inputTitulo.Text);
+            _inputAutor1.Text = _validaciones.ValidarString(_inputAutor1.Text, _inputAutor.Text); ;
+            _inputEdicion1.Text= _validaciones.ValidarInt(_inputEdicion1.Text, _inputEdicion.Text, 1400, DateTime.Now.Year).ToString();
+            _inputEditorial1.Text = _validaciones.ValidarString(_inputEditorial1.Text, _inputEditorial.Text);
+            _inputPaginas1.Text = _validaciones.ValidarInt(_inputPaginas1.Text, _inputPaginas.Text, 1, 4000).ToString();
+            _inputTemas1.Text = _validaciones.ValidarString(_inputTemas1.Text, _inputTemas.Text);
 
-            return true;
         }
 
         private void Limpiar()
