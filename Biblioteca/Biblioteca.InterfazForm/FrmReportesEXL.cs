@@ -17,11 +17,12 @@ namespace Biblioteca.InterfazForm
         private EjemplarNegocio _ejemplarNegocio;
         private LibroNegocio _libroNegocio;
 
-        public FrmReportesEXL()
+        public FrmReportesEXL(Form padre)
         {
             InitializeComponent();
             _ejemplarNegocio = new EjemplarNegocio();
             _libroNegocio = new LibroNegocio();
+            this.Owner = padre;
         }
 
         private void _btnExL_Click(object sender, EventArgs e)
@@ -71,11 +72,8 @@ namespace Biblioteca.InterfazForm
 
         private void _btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            FrmBiblioteca frm3 = new FrmBiblioteca();
-
-            frm3.Show();
+            this.Owner.Show();
+            this.Close();
         }
 
         private void CargarLista()

@@ -18,12 +18,13 @@ namespace Biblioteca.InterfazForm
         private LibroNegocio _libroNegocio;
         private Validaciones _validaciones;
 
-        public FrmEjemplares()
+        public FrmEjemplares(Form padre)
         {
             InitializeComponent();
             _ejemplarNegocio = new EjemplarNegocio();
             _libroNegocio = new LibroNegocio();
             _validaciones = new Validaciones();
+            this.Owner = padre; 
         }
 
         private void AltaEjemplar(int libro, string observaciones, int precio)
@@ -107,11 +108,8 @@ namespace Biblioteca.InterfazForm
 
         private void _btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            FrmBiblioteca frm3 = new FrmBiblioteca();
-
-            frm3.Show();
+            this.Owner.Show();
+            this.Close();
         }
 
         private void CargarLista()

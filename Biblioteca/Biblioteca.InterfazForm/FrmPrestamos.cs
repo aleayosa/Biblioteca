@@ -19,7 +19,7 @@ namespace Biblioteca.InterfazForm
         private ClienteNegocio _clienteNegocio;
         private EjemplarNegocio _ejemplarNegocio;
         private Validaciones _validaciones;
-        public FrmPrestamos()
+        public FrmPrestamos(Form padre)
         {
             InitializeComponent();
 
@@ -28,6 +28,7 @@ namespace Biblioteca.InterfazForm
             _clienteNegocio = new ClienteNegocio();
             _ejemplarNegocio = new EjemplarNegocio();
             _validaciones = new Validaciones();
+            this.Owner = padre;
         }
 
 
@@ -126,11 +127,8 @@ namespace Biblioteca.InterfazForm
 
         private void _btnVolver3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            FrmBiblioteca frm4 = new FrmBiblioteca();
-
-            frm4.Show();
+            this.Owner.Show();
+            this.Close();
         }
 
         private void FrmPrestamos_Load(object sender, EventArgs e)

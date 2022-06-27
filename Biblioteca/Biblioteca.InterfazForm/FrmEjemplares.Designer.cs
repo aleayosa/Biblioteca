@@ -52,18 +52,18 @@ namespace Biblioteca.InterfazForm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 22);
+            this.label5.Location = new System.Drawing.Point(14, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(324, 24);
+            this.label5.Size = new System.Drawing.Size(373, 26);
             this.label5.TabIndex = 24;
             this.label5.Text = "Ingrese los datos del nuevo ejemplar:";
             // 
             // _btnAlta
             // 
-            this._btnAlta.Location = new System.Drawing.Point(227, 172);
+            this._btnAlta.Location = new System.Drawing.Point(255, 215);
             this._btnAlta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnAlta.Name = "_btnAlta";
-            this._btnAlta.Size = new System.Drawing.Size(112, 23);
+            this._btnAlta.Size = new System.Drawing.Size(126, 29);
             this._btnAlta.TabIndex = 15;
             this._btnAlta.Text = "Crear";
             this._btnAlta.UseVisualStyleBackColor = true;
@@ -74,18 +74,18 @@ namespace Biblioteca.InterfazForm
             this._lblListaEjemplares.AutoSize = true;
             this._lblListaEjemplares.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblListaEjemplares.ForeColor = System.Drawing.Color.Red;
-            this._lblListaEjemplares.Location = new System.Drawing.Point(339, 68);
+            this._lblListaEjemplares.Location = new System.Drawing.Point(381, 85);
             this._lblListaEjemplares.Name = "_lblListaEjemplares";
-            this._lblListaEjemplares.Size = new System.Drawing.Size(0, 23);
+            this._lblListaEjemplares.Size = new System.Drawing.Size(0, 27);
             this._lblListaEjemplares.TabIndex = 27;
             // 
             // _btnAtras
             // 
             this._btnAtras.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnAtras.Location = new System.Drawing.Point(1699, 16);
+            this._btnAtras.Location = new System.Drawing.Point(1140, 22);
             this._btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnAtras.Name = "_btnAtras";
-            this._btnAtras.Size = new System.Drawing.Size(119, 30);
+            this._btnAtras.Size = new System.Drawing.Size(134, 36);
             this._btnAtras.TabIndex = 30;
             this._btnAtras.Text = "Volver";
             this._btnAtras.UseVisualStyleBackColor = false;
@@ -99,12 +99,12 @@ namespace Biblioteca.InterfazForm
             this.Titulo,
             this.Precio,
             this.id});
-            this._dataGridEjemplares.Location = new System.Drawing.Point(401, 64);
+            this._dataGridEjemplares.Location = new System.Drawing.Point(451, 80);
             this._dataGridEjemplares.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._dataGridEjemplares.Name = "_dataGridEjemplares";
             this._dataGridEjemplares.RowHeadersWidth = 51;
             this._dataGridEjemplares.RowTemplate.Height = 24;
-            this._dataGridEjemplares.Size = new System.Drawing.Size(1417, 678);
+            this._dataGridEjemplares.Size = new System.Drawing.Size(1594, 848);
             this._dataGridEjemplares.TabIndex = 31;
             // 
             // Observaciones
@@ -139,71 +139,71 @@ namespace Biblioteca.InterfazForm
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(397, 20);
+            this.label7.Location = new System.Drawing.Point(447, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 24);
+            this.label7.Size = new System.Drawing.Size(232, 29);
             this.label7.TabIndex = 28;
             this.label7.Text = "Listado de Ejemplares";
             // 
             // _inputObservaciones
             // 
-            this._inputObservaciones.Location = new System.Drawing.Point(164, 100);
+            this._inputObservaciones.Location = new System.Drawing.Point(184, 125);
             this._inputObservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._inputObservaciones.Name = "_inputObservaciones";
-            this._inputObservaciones.Size = new System.Drawing.Size(175, 22);
+            this._inputObservaciones.Size = new System.Drawing.Size(196, 26);
             this._inputObservaciones.TabIndex = 34;
             // 
             // _lblLibro
             // 
             this._lblLibro.AutoSize = true;
-            this._lblLibro.Location = new System.Drawing.Point(13, 69);
+            this._lblLibro.Location = new System.Drawing.Point(15, 86);
             this._lblLibro.Name = "_lblLibro";
-            this._lblLibro.Size = new System.Drawing.Size(40, 17);
+            this._lblLibro.Size = new System.Drawing.Size(44, 20);
             this._lblLibro.TabIndex = 16;
             this._lblLibro.Text = "Libro";
             // 
             // _lblObservaciones
             // 
             this._lblObservaciones.AutoSize = true;
-            this._lblObservaciones.Location = new System.Drawing.Point(13, 100);
+            this._lblObservaciones.Location = new System.Drawing.Point(15, 125);
             this._lblObservaciones.Name = "_lblObservaciones";
-            this._lblObservaciones.Size = new System.Drawing.Size(103, 17);
+            this._lblObservaciones.Size = new System.Drawing.Size(114, 20);
             this._lblObservaciones.TabIndex = 17;
             this._lblObservaciones.Text = "Observaciones";
             // 
             // _lblPrecio
             // 
             this._lblPrecio.AutoSize = true;
-            this._lblPrecio.Location = new System.Drawing.Point(13, 138);
+            this._lblPrecio.Location = new System.Drawing.Point(15, 172);
             this._lblPrecio.Name = "_lblPrecio";
-            this._lblPrecio.Size = new System.Drawing.Size(48, 17);
+            this._lblPrecio.Size = new System.Drawing.Size(53, 20);
             this._lblPrecio.TabIndex = 20;
             this._lblPrecio.Text = "Precio";
             // 
             // _inputPrecio
             // 
-            this._inputPrecio.Location = new System.Drawing.Point(164, 133);
+            this._inputPrecio.Location = new System.Drawing.Point(184, 166);
             this._inputPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._inputPrecio.Name = "_inputPrecio";
-            this._inputPrecio.Size = new System.Drawing.Size(175, 22);
+            this._inputPrecio.Size = new System.Drawing.Size(196, 26);
             this._inputPrecio.TabIndex = 35;
             // 
             // _cmbLibros
             // 
             this._cmbLibros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbLibros.FormattingEnabled = true;
-            this._cmbLibros.Location = new System.Drawing.Point(111, 64);
+            this._cmbLibros.Location = new System.Drawing.Point(125, 80);
             this._cmbLibros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._cmbLibros.Name = "_cmbLibros";
-            this._cmbLibros.Size = new System.Drawing.Size(228, 24);
+            this._cmbLibros.Size = new System.Drawing.Size(256, 28);
             this._cmbLibros.TabIndex = 45;
             // 
             // FrmEjemplares
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1856, 763);
+            this.ClientSize = new System.Drawing.Size(1924, 954);
             this.Controls.Add(this._cmbLibros);
             this.Controls.Add(this._inputPrecio);
             this.Controls.Add(this._inputObservaciones);

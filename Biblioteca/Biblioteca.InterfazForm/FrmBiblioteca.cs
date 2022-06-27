@@ -21,7 +21,7 @@ namespace Biblioteca.InterfazForm
         {
             this.Hide();
 
-            FrmClientes frm = new FrmClientes();
+            FrmClientes frm = new FrmClientes(this);
 
             frm.Show();
         }
@@ -30,7 +30,7 @@ namespace Biblioteca.InterfazForm
         {
             this.Hide();
 
-            FrmLibros frm1 = new FrmLibros();
+            FrmLibros frm1 = new FrmLibros(this);
 
             frm1.Show();
         }
@@ -39,7 +39,7 @@ namespace Biblioteca.InterfazForm
         {
             this.Hide();
 
-            FrmPrestamos frm2 = new FrmPrestamos();
+            FrmPrestamos frm2 = new FrmPrestamos(this);
 
             frm2.Show();
         }
@@ -48,7 +48,7 @@ namespace Biblioteca.InterfazForm
         {
             this.Hide();
 
-            FrmEjemplares frm3 = new FrmEjemplares();
+            FrmEjemplares frm3 = new FrmEjemplares(this);
 
             frm3.Show();
         }
@@ -57,7 +57,7 @@ namespace Biblioteca.InterfazForm
         {
             this.Hide();
 
-            FrmReportesPXC frm4 = new FrmReportesPXC();
+            FrmReportesPXC frm4 = new FrmReportesPXC(this);
 
             frm4.Show();
         }
@@ -66,7 +66,7 @@ namespace Biblioteca.InterfazForm
         {
             this.Hide();
 
-            FrmReportesEXL frm5 = new FrmReportesEXL();
+            FrmReportesEXL frm5 = new FrmReportesEXL(this);
 
             frm5.Show();
         }

@@ -16,11 +16,12 @@ namespace Biblioteca.InterfazForm
     {
         private LibroNegocio _libroNegocio;
         private Validaciones _validaciones;
-        public FrmLibros()
+        public FrmLibros(Form padre)
         {
             InitializeComponent();
             _libroNegocio = new LibroNegocio();
             _validaciones = new Validaciones();
+            this.Owner = padre;
         }
 
         private void AltaLibro(string titulo, string autor, int edicion, string editorial, int paginas, string tema)
@@ -104,11 +105,8 @@ namespace Biblioteca.InterfazForm
 
         private void _btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            FrmBiblioteca frm3 = new FrmBiblioteca();
-
-            frm3.Show();
+            this.Owner.Show();
+            this.Close();
         }
 
     }

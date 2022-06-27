@@ -20,7 +20,7 @@ namespace Biblioteca.InterfazForm
         private EjemplarNegocio _ejemplarNegocio;
         private Validaciones _validaciones;
 
-        public FrmReportesPXC()
+        public FrmReportesPXC(Form padre)
         {
             InitializeComponent();
 
@@ -29,6 +29,8 @@ namespace Biblioteca.InterfazForm
             _clienteNegocio = new ClienteNegocio();
             _ejemplarNegocio = new EjemplarNegocio();
             _validaciones = new Validaciones();
+            this.Owner = padre;
+
         }
 
         private void _btnPxC_Click(object sender, EventArgs e)
@@ -93,11 +95,8 @@ namespace Biblioteca.InterfazForm
 
         private void _btnVolver5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            FrmBiblioteca frm1 = new FrmBiblioteca();
-
-            frm1.Show();
+            this.Owner.Show();
+            this.Close();
         }
 
         private void CargarLista()

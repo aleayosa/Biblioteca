@@ -16,12 +16,13 @@ namespace Biblioteca.InterfazForm
     {
         private ClienteNegocio _clienteNegocio;
         private Validaciones _validaciones;
-        public FrmClientes()
+        public FrmClientes(Form padre)
         {
             InitializeComponent();
 
             _clienteNegocio = new ClienteNegocio();
             _validaciones = new Validaciones();
+            this.Owner = padre;
         }
 
         private void AltaCliente(string nombre, string apellido, string direccion, string telefono, string email)
@@ -104,11 +105,13 @@ namespace Biblioteca.InterfazForm
 
         private void _btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Owner.Show();
+            this.Close();
+        }
 
-            FrmBiblioteca frm2 = new FrmBiblioteca();
+        private void _inputNombre_TextChanged(object sender, EventArgs e)
+        {
 
-            frm2.Show();
         }
     }
 }
