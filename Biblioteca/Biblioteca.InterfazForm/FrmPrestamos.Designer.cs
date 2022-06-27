@@ -303,6 +303,7 @@ namespace Biblioteca.InterfazForm
             this._cmbEjemplares.Name = "_cmbEjemplares";
             this._cmbEjemplares.Size = new System.Drawing.Size(256, 28);
             this._cmbEjemplares.TabIndex = 45;
+            //this._cmbEjemplares.SelectedIndexChanged += new System.EventHandler(this._cmbEjemplares_SelectedIndexChanged);
             // 
             // _cmbIdEliminar
             // 
