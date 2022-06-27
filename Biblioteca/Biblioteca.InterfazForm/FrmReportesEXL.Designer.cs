@@ -132,7 +132,7 @@ namespace Biblioteca.InterfazForm
             // _btnAtras
             // 
             this._btnAtras.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnAtras.Location = new System.Drawing.Point(1140, 22);
+            this._btnAtras.Location = new System.Drawing.Point(940, 22);
             this._btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnAtras.Name = "_btnAtras";
             this._btnAtras.Size = new System.Drawing.Size(134, 36);
@@ -150,7 +150,6 @@ namespace Biblioteca.InterfazForm
             this._cmbLibroE.Name = "_cmbLibroE";
             this._cmbLibroE.Size = new System.Drawing.Size(208, 28);
             this._cmbLibroE.TabIndex = 46;
-            //this._cmbLibroE.SelectedIndexChanged += new System.EventHandler(this._cmbLibroE_SelectedIndexChanged);
             // 
             // FrmReportesEXL
             // 
