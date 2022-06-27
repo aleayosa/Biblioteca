@@ -49,9 +49,9 @@ namespace Biblioteca.InterfazForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 82);
+            this.label1.Location = new System.Drawing.Point(12, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 25);
+            this.label1.Size = new System.Drawing.Size(190, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese el ID del cliente ";
             // 
@@ -65,12 +65,12 @@ namespace Biblioteca.InterfazForm
             this.Ejemplar,
             this.FechaAlta,
             this.FechaBaja});
-            this._dataGridReportePrestamos.Location = new System.Drawing.Point(240, 82);
+            this._dataGridReportePrestamos.Location = new System.Drawing.Point(213, 66);
             this._dataGridReportePrestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._dataGridReportePrestamos.Name = "_dataGridReportePrestamos";
             this._dataGridReportePrestamos.RowHeadersWidth = 51;
             this._dataGridReportePrestamos.RowTemplate.Height = 24;
-            this._dataGridReportePrestamos.Size = new System.Drawing.Size(1764, 852);
+            this._dataGridReportePrestamos.Size = new System.Drawing.Size(1459, 682);
             this._dataGridReportePrestamos.TabIndex = 2;
             // 
             // Id
@@ -79,7 +79,7 @@ namespace Biblioteca.InterfazForm
             this.Id.HeaderText = "ID";
             this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
-            this.Id.Width = 62;
+            this.Id.Width = 50;
             // 
             // Titulo
             // 
@@ -101,7 +101,7 @@ namespace Biblioteca.InterfazForm
             this.Ejemplar.HeaderText = "Ejemplar";
             this.Ejemplar.MinimumWidth = 6;
             this.Ejemplar.Name = "Ejemplar";
-            this.Ejemplar.Width = 107;
+            this.Ejemplar.Width = 92;
             // 
             // FechaAlta
             // 
@@ -121,9 +121,9 @@ namespace Biblioteca.InterfazForm
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(235, 26);
+            this.label2.Location = new System.Drawing.Point(209, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(251, 29);
+            this.label2.Size = new System.Drawing.Size(203, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Préstamos del cliente:";
             // 
@@ -132,17 +132,17 @@ namespace Biblioteca.InterfazForm
             this._lblNombreCliente.AutoSize = true;
             this._lblNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblNombreCliente.ForeColor = System.Drawing.Color.Blue;
-            this._lblNombreCliente.Location = new System.Drawing.Point(512, 26);
+            this._lblNombreCliente.Location = new System.Drawing.Point(455, 21);
             this._lblNombreCliente.Name = "_lblNombreCliente";
-            this._lblNombreCliente.Size = new System.Drawing.Size(0, 29);
+            this._lblNombreCliente.Size = new System.Drawing.Size(0, 25);
             this._lblNombreCliente.TabIndex = 4;
             // 
             // _btnPxC
             // 
-            this._btnPxC.Location = new System.Drawing.Point(143, 145);
+            this._btnPxC.Location = new System.Drawing.Point(127, 116);
             this._btnPxC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnPxC.Name = "_btnPxC";
-            this._btnPxC.Size = new System.Drawing.Size(84, 32);
+            this._btnPxC.Size = new System.Drawing.Size(75, 26);
             this._btnPxC.TabIndex = 5;
             this._btnPxC.Text = "Buscar";
             this._btnPxC.UseVisualStyleBackColor = true;
@@ -151,10 +151,10 @@ namespace Biblioteca.InterfazForm
             // _btnVolver5
             // 
             this._btnVolver5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this._btnVolver5.Location = new System.Drawing.Point(1140, 22);
+            this._btnVolver5.Location = new System.Drawing.Point(1553, 17);
             this._btnVolver5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._btnVolver5.Name = "_btnVolver5";
-            this._btnVolver5.Size = new System.Drawing.Size(134, 36);
+            this._btnVolver5.Size = new System.Drawing.Size(119, 29);
             this._btnVolver5.TabIndex = 18;
             this._btnVolver5.Text = "Volver";
             this._btnVolver5.UseVisualStyleBackColor = false;
@@ -164,17 +164,17 @@ namespace Biblioteca.InterfazForm
             // 
             this._cmbClientesP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbClientesP.FormattingEnabled = true;
-            this._cmbClientesP.Location = new System.Drawing.Point(17, 112);
+            this._cmbClientesP.Location = new System.Drawing.Point(15, 90);
             this._cmbClientesP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this._cmbClientesP.Name = "_cmbClientesP";
-            this._cmbClientesP.Size = new System.Drawing.Size(208, 28);
+            this._cmbClientesP.Size = new System.Drawing.Size(185, 24);
             this._cmbClientesP.TabIndex = 45;
             // 
             // FrmReportesPXC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 992);
+            this.ClientSize = new System.Drawing.Size(1710, 794);
             this.Controls.Add(this._cmbClientesP);
             this.Controls.Add(this._btnVolver5);
             this.Controls.Add(this._btnPxC);

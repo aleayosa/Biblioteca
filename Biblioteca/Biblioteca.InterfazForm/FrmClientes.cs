@@ -109,9 +109,5 @@ namespace Biblioteca.InterfazForm
             this.Close();
         }
 
-        private void _inputNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

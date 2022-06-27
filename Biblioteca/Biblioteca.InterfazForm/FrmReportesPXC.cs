@@ -40,49 +40,31 @@ namespace Biblioteca.InterfazForm
                 if (!_validaciones.ValidarNull(_cmbClientesP.Text))
                     throw new Exception("El campo ID no puede estar vacío");
 
-                int idCliente = 0;
+
                 List<Libro> listadoLibros = _libroNegocio.GetLista(); ;
                 List<Cliente> listadoClientes = _clienteNegocio.GetLista();
                 List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
-                for (var i = 0; i < listadoClientes.Count; i++)
-                {
-                    if (listadoClientes[i].Id == int.Parse(_cmbClientesP.SelectedValue.ToString()))
-                    {
-                        idCliente = i;
-                    }
-                }
-
-                _lblNombreCliente.Text = _cmbClientesP.Text;
-
                 List<Prestamo> listadoPrestamo = _prestamoNegocio.GetLista();
 
+                _lblNombreCliente.Text = _cmbClientesP.Text;
                 _dataGridReportePrestamos.Rows.Clear();
                 foreach (Prestamo p in listadoPrestamo)
                 {
-                    if (p.IdCliente == listadoClientes[idCliente].Id)
+                    if (p.IdCliente == int.Parse(_cmbClientesP.SelectedValue.ToString()))
                     {
+                        var ejem = listadoEjemplares.Where(ej => ej.Id == p.IdEjemplar).FirstOrDefault();
+                        var libro = listadoLibros.Where(l => l.Id == ejem.IdLibro).FirstOrDefault();
 
-                        for (var i = 0; i < listadoEjemplares.Count; i++)
-                        {
-                            if (listadoEjemplares[i].Id == p.IdEjemplar)
-                            {
-                                for (var j = 0; j < listadoLibros.Count; j++)
-                                {
-                                    if (listadoLibros[j].Id == listadoEjemplares[i].IdLibro)
-                                    {
-                                        int n = _dataGridReportePrestamos.Rows.Add();
-                                        _dataGridReportePrestamos.Rows[n].Cells[0].Value = p.Id;
-                                        _dataGridReportePrestamos.Rows[n].Cells[1].Value = listadoLibros[j].Titulo;
-                                        _dataGridReportePrestamos.Rows[n].Cells[2].Value = listadoLibros[j].Autor;
-                                        _dataGridReportePrestamos.Rows[n].Cells[3].Value = p.IdEjemplar;
-                                        _dataGridReportePrestamos.Rows[n].Cells[4].Value = p.FechaPrestamo;
-                                        _dataGridReportePrestamos.Rows[n].Cells[5].Value = p.FechaDevolucionTentativa;
+                        int n = _dataGridReportePrestamos.Rows.Add();
+                        _dataGridReportePrestamos.Rows[n].Cells[0].Value = p.Id;
+                        _dataGridReportePrestamos.Rows[n].Cells[1].Value = libro.Titulo;
+                        _dataGridReportePrestamos.Rows[n].Cells[2].Value = libro.Autor;
+                        _dataGridReportePrestamos.Rows[n].Cells[3].Value = p.IdEjemplar;
+                        _dataGridReportePrestamos.Rows[n].Cells[4].Value = p.FechaPrestamo;
+                        _dataGridReportePrestamos.Rows[n].Cells[5].Value = p.FechaDevolucionTentativa;
 
-                                        _cmbClientesP.Text = string.Empty;
-                                    }
-                                }
-                            }
-                        }
+                        _cmbClientesP.Text = string.Empty;
+
                     }
 
                 }

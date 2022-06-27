@@ -69,36 +69,21 @@ namespace Biblioteca.InterfazForm
                 _dataGridPrestamos.Rows.Clear();
                 foreach (Prestamo p in listadoPrestamo)
                 {
-                    for (var i = 0; i < listadoEjemplares.Count; i++)
-                    {
-                        if (listadoEjemplares[i].Id == p.IdEjemplar)
-                        {
-                            for (var j = 0; j < listadoLibros.Count; j++)
-                            {
-                                if (listadoLibros[j].Id == listadoEjemplares[i].IdLibro)
-                                {
 
-                                    int n = _dataGridPrestamos.Rows.Add();
-                                    _dataGridPrestamos.Rows[n].Cells[0].Value = p.Id;
-                                    foreach (Cliente c in listadoClientes)
-                                    {
-                                        if (c.Id == p.IdCliente)
-                                            _dataGridPrestamos.Rows[n].Cells[1].Value = c.Apellido + ", " + c.Nombre;
+                    int n = _dataGridPrestamos.Rows.Add();
+                    _dataGridPrestamos.Rows[n].Cells[0].Value = p.Id;
 
-                                    }
-                                    _dataGridPrestamos.Rows[n].Cells[2].Value = p.IdEjemplar;
-                                    _dataGridPrestamos.Rows[n].Cells[3].Value = listadoLibros[j].Titulo;
-                                    _dataGridPrestamos.Rows[n].Cells[4].Value = listadoLibros[j].Autor;
-                                    _dataGridPrestamos.Rows[n].Cells[5].Value = p.FechaPrestamo;
-                                    _dataGridPrestamos.Rows[n].Cells[6].Value = p.FechaDevolucionTentativa;
-                                    _dataGridPrestamos.Rows[n].Cells[7].Value = p.FechaDevolucionReal;
+                    var cliente = listadoClientes.Where(c => c.Id == p.IdCliente).FirstOrDefault();
+                    var ejem = listadoEjemplares.Where(e => e.Id == p.IdEjemplar).FirstOrDefault();
+                    var libro = listadoLibros.Where(l => l.Id == ejem.IdLibro).FirstOrDefault();
 
-
-                                }
-                            }
-                        }
-                    }
-
+                    _dataGridPrestamos.Rows[n].Cells[1].Value = cliente.Apellido + ", " + cliente.Nombre;
+                    _dataGridPrestamos.Rows[n].Cells[2].Value = p.IdEjemplar;
+                    _dataGridPrestamos.Rows[n].Cells[3].Value = libro.Titulo;
+                    _dataGridPrestamos.Rows[n].Cells[4].Value = libro.Autor;
+                    _dataGridPrestamos.Rows[n].Cells[5].Value = p.FechaPrestamo;
+                    _dataGridPrestamos.Rows[n].Cells[6].Value = p.FechaDevolucionTentativa;
+                    _dataGridPrestamos.Rows[n].Cells[7].Value = p.FechaDevolucionReal;
                 }
             }
             catch (Exception ex)
@@ -146,7 +131,8 @@ namespace Biblioteca.InterfazForm
             _cmbClientes.DisplayMember = "ComboDisplay";
             _cmbClientes.ValueMember = "Id";
 
-            List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
+
+            List<Ejemplar> listadoEjemplares = EjemplaresDisponibles();
 
             _cmbEjemplares.DataSource = null;
             _cmbEjemplares.DataSource = listadoEjemplares;
@@ -209,9 +195,9 @@ namespace Biblioteca.InterfazForm
                     {
                         Prestamo p2 = new Prestamo();
                         p2 = p;
-                        if(p2.FechaDevolucionReal != Convert.ToDateTime("1/1/0001"))
+                        if (p2.FechaDevolucionReal != Convert.ToDateTime("1/1/0001"))
                         {
-                            throw new Exception("El préstamo seleccionado ya fue finalizado con fecha: "+p2.FechaDevolucionReal+".");
+                            throw new Exception("El préstamo seleccionado ya fue finalizado con fecha: " + p2.FechaDevolucionReal + ".");
                         }
                         p2.FechaDevolucionReal = DateTime.Now;
                         _prestamoNegocio.Modificar(p2);
@@ -226,6 +212,19 @@ namespace Biblioteca.InterfazForm
 
                 MessageBox.Show("Error al finalizar el préstamo: " + ex.Message);
             }
+        }
+
+        private List<Ejemplar> EjemplaresDisponibles()
+        {
+            List<Prestamo> listadoPrestamos = _prestamoNegocio.GetLista();
+            List<Ejemplar> listadoEjemplares = _ejemplarNegocio.GetLista();
+            List<Prestamo> listadoPrestado = new List<Prestamo>();
+            List<Ejemplar> listado = new List<Ejemplar>();
+
+            listadoPrestado = listadoPrestamos.Where(p => p.FechaDevolucionReal == Convert.ToDateTime("1/1/0001")).ToList();
+            listado = (from e in listadoEjemplares where !listadoPrestado.Select(p => p.IdEjemplar).Contains(e.Id) select e).ToList();
+
+            return listado;
         }
 
     }
